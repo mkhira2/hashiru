@@ -6,6 +6,7 @@ import init from './init'
 import HomePage from './views/homePage'
 import LoginPage from './views/loginPage'
 import AddRunPage from './views/addRunPage'
+import FAQPage from './views/faqPage'
 
 
 const app = function() {
@@ -15,6 +16,7 @@ const app = function() {
             'home': 'renderHomePage',
             'login': 'renderLoginPage',
             'addrun': 'renderAddRunPage',
+            'faq': 'renderFAQPage',
             '*default': 'handleRedirect'
         },
 
@@ -28,6 +30,10 @@ const app = function() {
 
         renderAddRunPage: function() {
             ReactDOM.render(<AddRunPage />, document.querySelector('.container'))
+        },
+
+        renderFAQPage: function() {
+            ReactDOM.render(<FAQPage />, document.querySelector('.container'))
         },
 
         handleRedirect: function() {
