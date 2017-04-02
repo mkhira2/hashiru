@@ -71,7 +71,7 @@ h2 {
 	width: 100%;
 }
 
-.levelAndNumberHP, .milesAndBarHP, .achievementsContainer, .loginForm, .registerForm {
+.levelAndNumberHP, .milesAndBarHP, .achievementsContainer, .form {
 	border: 2px solid fuchsia;
 	box-shadow: 2px 2px grey;
 	display: inline-block;
@@ -90,10 +90,10 @@ h2 {
 	color: white;
 }
 
-.loginInput {
+.loginInput, .loginButton {
 	margin: 5px;
 }
 
-.loginButton {
+.addRunInput, .addRunButton {
 	margin: 5px;
 }

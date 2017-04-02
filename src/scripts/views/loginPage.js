@@ -24,13 +24,13 @@ var LoginForm = React.createClass({
 
 	render: function(){
 		return (
-			<div className='loginForm'>
-			<h2>Login</h2>
-			<form onSubmit={this._handleSubmit}>
-				<input className='loginInput' type='text' name='email' placeholder='enter your email' /> <br />
-				<input className='loginInput' type='password' name='password' placeholder='enter your password' /> <br />
-				<button className='loginButton' type='submit'>Submit</button>
-			</form>
+			<div className='form loginForm'>
+				<h2>Login</h2>
+				<form onSubmit={this._handleSubmit}>
+					<input className='loginInput' type='text' name='email' placeholder='enter your email' /> <br />
+					<input className='loginInput' type='password' name='password' placeholder='enter your password' /> <br />
+					<button className='loginButton' type='submit'>Submit</button>
+				</form>
 			</div>
 		)
 	}
@@ -50,13 +50,13 @@ var RegisterForm = React.createClass({
 	},
 	render: function(){
 		return (
-			<div className='registerForm'>
-			<h2>Register</h2>
-			<form onSubmit={this._handleSubmit}>
-				<input className='loginInput' type='text' name='yourName' placeholder='enter your name' /><br />
-				<input className='loginInput' type='text' name='email' placeholder='enter your email' /><br />
-				<input className='loginInput' type='password' name='password' placeholder='enter your password' /><br />
-				<button className='loginButton' type='submit'>Submit</button>
+			<div className='form registerForm'>
+				<h2>Register</h2>
+				<form onSubmit={this._handleSubmit}>
+					<input className='loginInput' type='text' name='yourName' placeholder='create a username' /><br />
+					<input className='loginInput' type='text' name='email' placeholder='enter email' /><br />
+					<input className='loginInput' type='password' name='password' placeholder='create password' /><br />
+					<button className='loginButton' type='submit'>Submit</button>
 			</form>
 			</div>
 		)

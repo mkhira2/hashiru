@@ -7,7 +7,21 @@ var AddRunPage = React.createClass({
 		return (
 			<div className='addRunPage'>
 				<Banner />
-				<h1>add a run</h1>
+				<AddRunForm />
+			</div>
+		)
+	}
+})
+
+var AddRunForm = React.createClass({
+	render: function() {
+		return (
+			<div className='form addRunForm'>
+				<form onSubmit={this._handleSubmit}>
+					<h2>Log A Run</h2>
+					<input className='addRunInput' type='text' name='distance' placeholder='Enter miles run' />
+					<button className='addRunButton' type='submit'>Submit</button>
+				</form>
 			</div>
 		)
 	}
