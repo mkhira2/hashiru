@@ -63,11 +63,15 @@ body {
 	background: lightgrey;
 }
 
+h2 {
+	margin: 5px;
+}
+
 .banner {
 	width: 100%;
 }
 
-.levelAndNumberHP, .milesAndBarHP, .achievementsContainer {
+.levelAndNumberHP, .milesAndBarHP, .achievementsContainer, .loginForm, .registerForm {
 	border: 2px solid fuchsia;
 	box-shadow: 2px 2px grey;
 	display: inline-block;
@@ -86,6 +90,10 @@ body {
 	color: white;
 }
 
-h2 {
+.loginInput {
+	margin: 5px;
+}
+
+.loginButton {
 	margin: 5px;
 }

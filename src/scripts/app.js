@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
 
-import HomePage from './views/homePage.js'
+import HomePage from './views/homePage'
+import LoginPage from './views/loginPage'
+import AddRunPage from './views/addRunPage'
 
 
 const app = function() {
@@ -11,11 +13,21 @@ const app = function() {
 
         routes: {
             'home': 'renderHomePage',
+            'login': 'renderLoginPage',
+            'addrun': 'renderAddRunPage',
             '*default': 'handleRedirect'
         },
 
         renderHomePage: function() {
-            ReactDOM.render(<HomePage /> , document.querySelector('.container'))
+            ReactDOM.render(<HomePage />, document.querySelector('.container'))
+        },
+
+        renderLoginPage: function() {
+            ReactDOM.render(<LoginPage />, document.querySelector('.container'))
+        },
+
+        renderAddRunPage: function() {
+            ReactDOM.render(<AddRunPage />, document.querySelector('.container'))
         },
 
         handleRedirect: function() {
