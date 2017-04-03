@@ -7,6 +7,8 @@ import HomePage from './views/homePage'
 import LoginPage from './views/loginPage'
 import AddRunPage from './views/addRunPage'
 import FAQPage from './views/faqPage'
+import BossBattlesPage from './views/bossBattlesPage'
+import QuestsPage from './views/questsPage'
 
 
 const app = function() {
@@ -17,6 +19,8 @@ const app = function() {
             'login': 'renderLoginPage',
             'addrun': 'renderAddRunPage',
             'faq': 'renderFAQPage',
+            'bossbattles': 'renderBossBattlesPage',
+            'quests': 'renderQuestsPage',
             '*default': 'handleRedirect'
         },
 
@@ -34,6 +38,14 @@ const app = function() {
 
         renderFAQPage: function() {
             ReactDOM.render(<FAQPage />, document.querySelector('.container'))
+        },
+
+        renderBossBattlesPage: function() {
+            ReactDOM.render(<BossBattlesPage />, document.querySelector('.container'))
+        },
+
+        renderQuestsPage: function() {
+            ReactDOM.render(<QuestsPage />, document.querySelector('.container'))
         },
 
         handleRedirect: function() {

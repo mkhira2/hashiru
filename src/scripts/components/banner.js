@@ -14,8 +14,8 @@ var Banner = React.createClass({
 				</div>
 				<nav className='navBar'>
 				<a className='navATag homeATag' href='#home'>Home</a>
-				<a className='navATag bossBattlesATag' href='#'>Boss Battles</a>
-				<a className='navATag questsATag' href='#'>Quests</a>
+				<a className='navATag bossBattlesATag' href='#bossbattles'>Boss Battles</a>
+				<a className='navATag questsATag' href='#quests'>Quests</a>
 				<a className='navATag addRunATag' href='#addrun'>Add Run</a>
 				<a className='navATag faqATag' href='#faq'>FAQ</a>
 				<a className='navATag logInATag' href='#login'>Log In</a>
