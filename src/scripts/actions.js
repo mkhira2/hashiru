@@ -5,21 +5,18 @@ import STORE from './store'
 
 var ACTIONS = {
 
+	checkLogInName: function() {
+		if (User.getCurrentUser() === null || (User.getCurrentUser().get('name') === undefined)) {
+			return 'Welcome!'
+		}
+		return `Welcome ${User.getCurrentUser().get('name')}!`
+	},
+
 	increaseLevel: function(miles) {
 		console.log('miles =', miles)
 		STORE.set({
 			expPoints: STORE.get('expPoints') + parseInt(miles)
 		})
-	},
-
-	checkLogInName: function(){
-		if(User.getCurrentUser() === null){
-			return 'Welcome!'
-		}
-		else if (User.getCurrentUser().get('name') === undefined) {
-			return 'Welcome!'
-		}
-		return `Welcome ${User.getCurrentUser().get('name')}!`
 	},
 
 	loggedInStatus: function() {

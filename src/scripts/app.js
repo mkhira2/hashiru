@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
+import ACTIONS from './actions'
+import User from './models/userModel'
 
 import HomePage from './views/homePage'
 import LoginPage from './views/loginPage'
@@ -48,9 +50,9 @@ const app = function() {
             ReactDOM.render(<QuestsPage />, document.querySelector('.container'))
         },
 
-        handleRedirect: function() {
-        	location.hash = 'home'
-        }
+        handleRedirect() {
+        location.hash = User.getCurrentUser() ? 'home' : 'login'
+    }
     })
 
     new HashiruRouter
