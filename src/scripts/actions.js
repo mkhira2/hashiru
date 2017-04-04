@@ -12,6 +12,16 @@ var ACTIONS = {
 		})
 	},
 
+	checkLogInName: function(){
+		if(User.getCurrentUser() === null){
+			return 'Welcome!'
+		}
+		else if (User.getCurrentUser().get('name') === undefined) {
+			return 'Welcome!'
+		}
+		return `Welcome ${User.getCurrentUser().get('name')}!`
+	},
+
 	loggedInStatus: function() {
 		console.log(User.getCurrentUser())
 		if(User.getCurrentUser() != null){

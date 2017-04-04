@@ -21,5 +21,5 @@ const runSchema = new mongoose.Schema({
 
 module.exports = {
   User: mongoose.model('User', usersSchema),
-  Run: mongoose.model('Run", runSchema')
+  Run: mongoose.model('Run', runSchema)
 }

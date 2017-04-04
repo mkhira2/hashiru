@@ -3,6 +3,8 @@ import React from 'react'
 import Banner from '../components/banner.js'
 import AchievementsContainer from '../components/achievementsContainer.js'
 import STORE from '../store'
+import User from '../models/userModel'
+import ACTIONS from '../actions'
 
 var HomePage = React.createClass({
 
@@ -29,7 +31,7 @@ var HomePage = React.createClass({
 
 			<div className='homePage'>
 				<Banner />
-				<h1>KENJI</h1>
+				<h1>{ACTIONS.checkLogInName()}</h1>
 				<div className='levelAndNumberHP'>
 					<h2>Level</h2>
 					<h2 className='levelHP'>{STORE.get('level')}</h2>
