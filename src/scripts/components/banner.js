@@ -7,7 +7,7 @@ var Banner = React.createClass({
 		return (
 			<div>
 				<div className='banner'>
-					<p className='quote'>THE BUSIEST MEN HAVE THE MOST LEISURE</p>
+					<p className='quote'>run</p>
 				</div>
 				<div>
 					<h1 className='title'>HASHIRU.</h1>
