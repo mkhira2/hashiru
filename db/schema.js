@@ -15,6 +15,11 @@ const usersSchema = new mongoose.Schema({
 
 })
 
+const runSchema = new mongoose.Schema({
+	miles: { type: Number, required: true}
+})
+
 module.exports = {
-  User: mongoose.model('User', usersSchema)
+  User: mongoose.model('User', usersSchema),
+  Run: mongoose.model('Run", runSchema')
 }

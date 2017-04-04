@@ -5,7 +5,8 @@ var STORE = Object.assign({},Backbone.Events,{
 
 	data:{
 
-		expPoints: 0
+		expPoints: 0,
+		level: 0
 	},
 
 	get: function(prop) {
@@ -15,8 +16,9 @@ var STORE = Object.assign({},Backbone.Events,{
 
 	set: function(obj){
 
-		console.log('total xp points', obj)
 		this.data = Object.assign(this.data, obj)
+		var totalXP = this.data
+		console.log('totalXP', totalXP)
 		this.trigger('dataUpdated')
 	}
 })

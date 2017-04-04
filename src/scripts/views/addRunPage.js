@@ -36,6 +36,7 @@ var AddRunForm = React.createClass({
 		evtObj.preventDefault()
 		var formEl = evtObj.target
 		ACTIONS.increaseLevel(formEl.distance.value)
+		formEl.reset()
 	},
 
 	render: function() {
