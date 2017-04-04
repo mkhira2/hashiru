@@ -2,7 +2,8 @@ import React from 'react'
 import ACTIONS from '../actions'
 import STORE from '../store'
 
-import Banner from '../components/banner.js'
+import Banner from '../components/banner'
+import UserInfo from '../components/userInfo'
 
 var AddRunPage = React.createClass({
 
@@ -24,6 +25,7 @@ var AddRunPage = React.createClass({
 		return (
 			<div className='addRunPage'>
 				<Banner />
+				<UserInfo />
 				<AddRunForm />
 			</div>
 		)

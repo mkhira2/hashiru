@@ -1,12 +1,14 @@
 import React from 'react'
 
-import Banner from '../components/banner.js'
+import Banner from '../components/banner'
+import UserInfo from '../components/userInfo'
 
 var BossBattlesPage = React.createClass({
 	render: function() {
 		return (
 			<div className='bossBattlesPage'>
 				<Banner />
+				<UserInfo />
 				<BossBattleBadgeContainer />
 			</div>
 		)

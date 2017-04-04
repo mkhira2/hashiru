@@ -9,7 +9,14 @@ var ACTIONS = {
 		if (User.getCurrentUser() === null || (User.getCurrentUser().get('name') === undefined)) {
 			return 'Welcome!'
 		}
-		return `Welcome ${User.getCurrentUser().get('name')}!`
+		return `${User.getCurrentUser().get('name')}`
+	},
+
+	checkLevel: function() {
+		if (User.getCurrentUser() === null || (User.getCurrentUser().get('name') === undefined)) {
+			return ''
+		}
+		return `Level ${STORE.get('level')}`
 	},
 
 	increaseLevel: function(miles) {
@@ -29,7 +36,7 @@ var ACTIONS = {
 			return 'Log Out'
 		}
 
-		else{
+		else {
 
 			STORE.set({userLoginStatus: 'Log In'})
 			console.log(STORE.data.userLoginStatus)

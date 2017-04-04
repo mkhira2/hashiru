@@ -1,5 +1,5 @@
 import React from 'react'
-import User from '../models/userModel.js'
+import User from '../models/userModel'
 
 import ACTIONS from '../actions'
 

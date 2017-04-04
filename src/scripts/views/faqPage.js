@@ -1,12 +1,14 @@
 import React from 'react'
 
 import Banner from '../components/banner'
+import UserInfo from '../components/userInfo'
 
 var FAQPage = React.createClass({
 	render: function() {
 		return (
 			<div className='faqPage'>
 				<Banner />
+				<UserInfo />
 				<br /><br />
 				<div className='faqs'>
 					<h2>What the heck does Hashiru mean, anyway?</h2>

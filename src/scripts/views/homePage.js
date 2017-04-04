@@ -31,7 +31,7 @@ var HomePage = React.createClass({
 
 			<div className='homePage'>
 				<Banner />
-				<h1>{ACTIONS.checkLogInName()}</h1>
+				<h1 className='userInfo'>{ACTIONS.checkLogInName()}</h1>
 				<div className='levelAndNumberHP'>
 					<h2>Level</h2>
 					<h2 className='levelHP'>{STORE.get('level')}</h2>
