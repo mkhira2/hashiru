@@ -8,7 +8,6 @@ import UserInfo from '../components/userInfo'
 var AddRunPage = React.createClass({
 
 	componentWillMount(){
-		console.log('props me', this.props.userID)
 		ACTIONS.fetchAllRuns(this.props.userID)
 		STORE.on('dataUpdated', ()=> {
 			this.setState(STORE.data)
@@ -29,7 +28,6 @@ var AddRunPage = React.createClass({
 				<Banner />
 				<UserInfo />
 				<AddRunForm runs={this.state.runCollection} />
-				<RunList runs={this.state.runCollection} />
 			</div>
 		)
 	}
@@ -65,13 +63,12 @@ var AddRunForm = React.createClass({
 
 var RunList = React.createClass({
 	makeSingleRun: function(model) {
-		if (model.get('complete') === false) {
 			return (
-				<SingleRun runs={model} key={model.cid} />
+				<SingleRun run={model} key={model.cid} />
 			)
-		}
 	},
 	render: function() {
+		console.log('lets see')
 		return (
 			<div className='runList'>
 				{this.props.runs.map(this.makeSingleRun)}
@@ -79,12 +76,13 @@ var RunList = React.createClass({
 		)
 	}
 })
+
 var SingleRun = React.createClass({
 	render: function() {
 		return (
 			<div className="singleRun" >
 				<div className='runDiv'>
-					<p>{this.props.runs.get('run')}</p>
+					<p>{this.props.run.get('run')}</p>
 				</div>	
 			</div>
 		)
