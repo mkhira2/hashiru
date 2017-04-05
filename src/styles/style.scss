@@ -104,7 +104,6 @@ h4 {
 p {
 	font-weight: bold;
 	font-size: 16px;
-	text-shadow: 2px 2px black;
 }
 
 a {
@@ -113,16 +112,13 @@ a {
 	margin: 0 10px;
 }
 
-.achievementsContainer p {
-	text-shadow: none;
-}
-
 .banner {
 	width: 100%;
 }
 
 .bossBattleBadgeContainer p, .questBadgeContainer p {
 	color: white;
+	text-shadow: 2px 2px black;
 }
 
 .levelAndNumberHP, .milesAndBarHP, .achievementsContainer, .addRunForm, .form {

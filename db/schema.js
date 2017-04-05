@@ -17,6 +17,7 @@ const usersSchema = new mongoose.Schema({
 
 const runSchema = new mongoose.Schema({
 	miles: { type: Number, required: true}
+
 })
 
 module.exports = {

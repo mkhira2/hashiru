@@ -27,6 +27,7 @@ var AddRunPage = React.createClass({
 				<Banner />
 				<UserInfo />
 				<AddRunForm />
+				<Runs />
 			</div>
 		)
 	}
@@ -51,6 +52,14 @@ var AddRunForm = React.createClass({
 					<button className='addRunButton' type='submit'>Submit</button>
 				</form>
 			</div>
+		)
+	}
+})
+
+var Runs = React.createClass({
+	render: function() {
+		return (
+			<div className='runs'></div>
 		)
 	}
 })
