@@ -77,11 +77,17 @@ var RunList = React.createClass({
 })
 
 var SingleRun = React.createClass({
+
+	handleDelete: function() {
+		ACTIONS.deleteRun(this.props.run)
+	},
+
 	render: function() {
 		return (
 			<div className="singleRun" >
 				<div className='runDiv'>
 					<p>{this.props.run.get('run') + ' miles'}</p>
+					<div onClick={this.handleDelete} className='deleteRun'>X</div>
 				</div>	
 			</div>
 		)

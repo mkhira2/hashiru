@@ -36,6 +36,16 @@ var ACTIONS = {
 		return `Level ${STORE.get('level')}`
 	},
 
+	deleteRun: function(run) {
+		var userID = User.getCurrentUser().get('_id')
+		run.destroy()
+			.done(ACTIONS.fetchAllRuns(userID))
+			.fail(function(error) {
+					alert('problem deleting run')
+					console.log(error)
+				})
+	},
+
 	fetchAllRuns: function(inputID) { 
 		var runColl = STORE.get('runCollection')
 		runColl.fetch({
@@ -56,8 +66,8 @@ var ACTIONS = {
 
 		runnerColl.fetch()
 			.then(function(){
+				
 			})
-
 	},
 
 	increaseLevel: function(miles) {

@@ -255,3 +255,11 @@ ADD RUN PAGE
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+
+.runDiv p {
+	margin-bottom: 0;
+}
+
+.deleteRun {
+	cursor: pointer;
+}
