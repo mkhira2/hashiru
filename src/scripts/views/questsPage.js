@@ -19,6 +19,8 @@ var QuestBadgeContainer = React.createClass({
 	render: function() {
 		return (
 			<div className='questBadgeContainer'>
+				<h1 className='badgeTitle'>Quests</h1>
+				<hr />
 
 				<div className='runBadge fiveKBadge'>
 					<img src='../images/fivekbadge.png' />

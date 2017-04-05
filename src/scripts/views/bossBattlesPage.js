@@ -19,6 +19,8 @@ var BossBattleBadgeContainer = React.createClass({
 	render: function() {
 		return (
 			<div className='bossBattleBadgeContainer'>
+				<h1 className='badgeTitle'>Boss Battles</h1>
+				<hr />
 
 				<div className='runBadge twentyfiveMileBadge'>
 					<img src='../images/twentyfivemilebadge.png' />

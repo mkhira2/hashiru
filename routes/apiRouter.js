@@ -16,14 +16,16 @@ let Run = require('../db/schema.js').Run
 
   apiRouter
     .get('/users/:_id', function(req, res){
+
       User.findById(req.params._id, "-password", function(err, record){
         if(err || !record ) return res.json(err) 
         res.json(record)
       })
     })
     .put('/users/:_id', function(req, res){
+            console.log('req',req.body)
 
-      User.findByIdAndUpdate(req.params._id, req.body, function(err, record){
+      User.findByIdAndUpdate(req.params._id, req.body, {new: true}, function(err, record){
           if (err) {
             res.status(500).send(err)
           }
@@ -31,7 +33,7 @@ let Run = require('../db/schema.js').Run
             res.status(400).send('no record found with that id')
           }
           else {
-            res.json(Object.assign({},req.body,record))
+            res.json(record)
           }
       })
     })
@@ -84,7 +86,7 @@ let Run = require('../db/schema.js').Run
             return response.status(400).json(error)
           }
           response.json({
-            msg: `Run ID ${request.params.issueId} has been deleted.`,
+            msg: `Run ID ${request.params.runsId} has been deleted.`,
             id: request.params.runsId
           })
         })

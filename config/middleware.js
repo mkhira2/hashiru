@@ -13,7 +13,7 @@ const errorHandler = function(err, req, res, next) {
 
 const cookifyUser = function(req,res,next) {
   if (req.user) {
-    res.cookie(global.PROJECT_NAME + '_user',JSON.stringify(req.user))
+    res.cookie('hashiru_user',JSON.stringify(req.user))
     res.cookie('tiy_full_stack_app_name', global.PROJECT_NAME)
     next()
   }

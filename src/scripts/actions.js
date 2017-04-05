@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import User from './models/userModel'
 import {Run} from './models/runModel'
 import STORE from './store'
+import $ from 'jquery'
 
 var ACTIONS = {
 
@@ -50,13 +51,35 @@ var ACTIONS = {
 	},
 
 	increaseLevel: function(miles) {
-		STORE.set({
-			expPoints: STORE.get('expPoints') + parseFloat(miles)
+		// get experience points dude.    User.getCurrentUser().get('expPoints')
+		var runner = User.getCurrentUser()
+
+		runner.set({
+			expPoints: runner.get('expPoints') + Number(miles)
 		})
+
+		runner.save().then(function() {
+			// do whatever, set something on store, whatever's next
+		},
+			function(err) {
+				console.log('OOPS')
+				console.log(err)
+			}
+		)
+
+	},
+
+	fetchRunners: function(){
+
+		var runnerColl = STORE.get('runnerCollection')
+
+		runnerColl.fetch()
+			.then(function(){
+			})
+
 	},
 
 	loggedInStatus: function() {
-		console.log(User.getCurrentUser())
 		if(User.getCurrentUser() != null){
 
 			STORE.set({userLoginStatus: 'Log Out'})

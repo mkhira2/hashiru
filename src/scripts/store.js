@@ -1,11 +1,15 @@
 import Backbone from 'backbone'
 import ACTIONS from './actions'
 import {RunCollection} from './models/runModel'
+import {RunnerCollection} from './models/runModel'
+import User from './models/userModel'
 
 var STORE = Object.assign({},Backbone.Events,{
 
 	data:{
+		userCollection: new User(),
 		runCollection: new RunCollection(),
+		runnerCollection: new RunnerCollection(),
 		expPoints: 0,
 		level: 0
 	},
@@ -18,7 +22,6 @@ var STORE = Object.assign({},Backbone.Events,{
 	set: function(obj){
 		this.data = Object.assign(this.data, obj)
 		var totalXP = this.data
-		console.log('totalXP', totalXP)
 		this.trigger('dataUpdated')
 	}
 })
