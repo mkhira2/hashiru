@@ -1,9 +1,25 @@
 import Backbone from 'backbone'
 import ReactDOM from 'react-dom'
 import User from './models/userModel'
+import {Run} from './models/runModel'
 import STORE from './store'
 
 var ACTIONS = {
+
+	addRun: function(runData) { 
+		runData.user_id = User.getCurrentUser().get('_id')
+		var newRun = new Run(runData)
+		newRun.save()
+			.then(
+				function(response) {
+					console.log('run added')
+					ACTIONS.fetchAllRuns(runData.user_id)
+				},
+				function(error) {
+					alert('problem adding run')
+				}
+			)
+	},
 
 	checkLogInName: function() {
 		if (User.getCurrentUser() === null || (User.getCurrentUser().get('name') === undefined)) {
@@ -17,6 +33,20 @@ var ACTIONS = {
 			return ''
 		}
 		return `Level ${STORE.get('level')}`
+	},
+
+	fetchAllRuns: function(inputID) { 
+		var runColl = STORE.get('runCollection')
+		runColl.fetch({
+			data: {
+				user_id: inputID
+			}
+		})
+			.then(function(){
+				STORE.set({
+					runCollection: runColl
+				})
+			})
 	},
 
 	increaseLevel: function(miles) {

@@ -5,7 +5,7 @@ import {RunCollection} from './models/runModel'
 var STORE = Object.assign({},Backbone.Events,{
 
 	data:{
-		RunCollection: new RunCollection(),
+		runCollection: new RunCollection(),
 		expPoints: 0,
 		level: 0
 	},

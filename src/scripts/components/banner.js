@@ -4,6 +4,10 @@ import User from '../models/userModel'
 import ACTIONS from '../actions'
 
 var Banner = React.createClass({
+	runLink:function(){
+		return (User.getCurrentUser()) ?  <a href= {`#addrun/user/${User.getCurrentUser().get('_id')}`} className= 'navATag'>Add Run</a> : null
+	},
+
 	render: function() {
 		var userLoggedOut = (User.getCurrentUser()) ? 'navATag hidden' : ''
 		var userLoggedIn = (!User.getCurrentUser()) ? 'navATag hidden' : ''
@@ -19,7 +23,7 @@ var Banner = React.createClass({
 				<a className={userLoggedIn} href='#home'>Home</a>
 				<a className='navATag' href='#bossbattles'>Boss Battles</a>
 				<a className='navATag' href='#quests'>Quests</a>
-				<a className={userLoggedIn} href='#addrun'>Add Run</a>
+				{this.runLink()}
 				<a className='navATag' href='#faq'>FAQ</a>
 				<a className={userLoggedOut} href='#login'>Log In</a>
 				<a className={userLoggedIn} onClick={ACTIONS.logUserOut}>Log Out</a>

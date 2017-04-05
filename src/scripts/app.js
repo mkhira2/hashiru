@@ -19,7 +19,7 @@ const app = function() {
         routes: {
             'home': 'renderHomePage',
             'login': 'renderLoginPage',
-            'addrun': 'renderAddRunPage',
+            'addrun/user/:id': 'renderAddRunPage',
             'faq': 'renderFAQPage',
             'bossbattles': 'renderBossBattlesPage',
             'quests': 'renderQuestsPage',
@@ -34,8 +34,8 @@ const app = function() {
             ReactDOM.render(<LoginPage />, document.querySelector('.container'))
         },
 
-        renderAddRunPage: function() {
-            ReactDOM.render(<AddRunPage />, document.querySelector('.container'))
+        renderAddRunPage: function(id) {
+            ReactDOM.render(<AddRunPage userID={id}/>, document.querySelector('.container'))
         },
 
         renderFAQPage: function() {
