@@ -50,9 +50,8 @@ var ACTIONS = {
 	},
 
 	increaseLevel: function(miles) {
-		console.log('miles =', miles)
 		STORE.set({
-			expPoints: STORE.get('expPoints') + parseInt(miles)
+			expPoints: STORE.get('expPoints') + parseFloat(miles)
 		})
 	},
 

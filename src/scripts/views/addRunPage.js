@@ -52,7 +52,7 @@ var AddRunForm = React.createClass({
 			<div>
 				<form className='form addRunForm' onSubmit={this._handleSubmit}>
 					<h2>Log A Run</h2>
-					<input className='addRunInput' type='number' name='miles' placeholder='Enter miles run' />
+					<input className='addRunInput' type='text' name='miles' placeholder='Enter miles run' />
 					<button className='addRunButton' type='submit'>Submit</button>
 					<RunList runs={this.props.runs} />
 				</form>
@@ -68,7 +68,6 @@ var RunList = React.createClass({
 			)
 	},
 	render: function() {
-		console.log('lets see')
 		return (
 			<div className='runList'>
 				{this.props.runs.map(this.makeSingleRun)}
@@ -82,7 +81,7 @@ var SingleRun = React.createClass({
 		return (
 			<div className="singleRun" >
 				<div className='runDiv'>
-					<p>{this.props.run.get('run')}</p>
+					<p>{this.props.run.get('run') + ' miles'}</p>
 				</div>	
 			</div>
 		)
