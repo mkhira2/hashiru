@@ -50,25 +50,6 @@ var ACTIONS = {
 			})
 	},
 
-	increaseLevel: function(miles) {
-		// get experience points dude.    User.getCurrentUser().get('expPoints')
-		var runner = User.getCurrentUser()
-
-		runner.set({
-			expPoints: runner.get('expPoints') + Number(miles)
-		})
-
-		runner.save().then(function() {
-			// do whatever, set something on store, whatever's next
-		},
-			function(err) {
-				console.log('OOPS')
-				console.log(err)
-			}
-		)
-
-	},
-
 	fetchRunners: function(){
 
 		var runnerColl = STORE.get('runnerCollection')
@@ -79,8 +60,26 @@ var ACTIONS = {
 
 	},
 
+	increaseLevel: function(miles) {
+		// get experience points dude. User.getCurrentUser().get('expPoints')
+		var runner = User.getCurrentUser()
+
+		runner.set({
+			expPoints: runner.get('expPoints') + Number(miles)
+		})
+
+		runner.save().then(function() {
+			console.log(User.getCurrentUser().get('expPoints'))
+		},
+			function(err) {
+				console.log('OOPS')
+				console.log(err)
+			}
+		)
+	},
+
 	loggedInStatus: function() {
-		if(User.getCurrentUser() != null){
+		if (User.getCurrentUser() != null){
 
 			STORE.set({userLoginStatus: 'Log Out'})
 			console.log(STORE.data.userLoginStatus)
