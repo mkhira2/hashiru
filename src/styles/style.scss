@@ -253,7 +253,7 @@ ADD RUN PAGE
 .runList {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	text-align: start;
 }
 
 .runDiv p {
@@ -262,4 +262,5 @@ ADD RUN PAGE
 
 .deleteRun {
 	cursor: pointer;
+	text-align: center;
 }
