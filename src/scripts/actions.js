@@ -60,32 +60,61 @@ var ACTIONS = {
 			})
 	},
 
-	fetchRunners: function(){
+	fetchRunner: function(){
 
-		var runnerColl = STORE.get('runnerCollection')
+		var users = STORE.get('usersCollection')
 
-		runnerColl.fetch()
+		users.fetch()
 			.then(function(){
-				
+				STORE.set({
+					usersCollection:users
+				})
 			})
-	},
+		},
 
-	increaseLevel: function(miles) {
+	increaseExpPoints: function(miles) {
 		// get experience points dude. User.getCurrentUser().get('expPoints')
 		var runner = User.getCurrentUser()
 
 		runner.set({
 			expPoints: runner.get('expPoints') + Number(miles)
+
 		})
+		console.log('exp points in increaseExpPoints', runner.get('expPoints'))
 
 		runner.save().then(function() {
-			console.log(User.getCurrentUser().get('expPoints'))
+			console.log('updated exp points =', User.getCurrentUser().get('expPoints'))
 		},
 			function(err) {
-				console.log('OOPS')
+				console.log('problem increasing exp points')
 				console.log(err)
 			}
 		)
+		STORE.set({
+			expPoints:User.getCurrentUser().get('expPoints')
+
+		})
+	},
+
+	increaseLevel: function(miles) {
+		// level up dude. User.getCurrentUser().get('level')
+		var runner = User.getCurrentUser()
+
+		runner.set({
+			level: runner.get('level') + Number(miles)
+		})
+
+		runner.save().then(function() {
+			console.log('updated level =', User.getCurrentUser().get('level'))
+		},
+			function(err) {
+				console.log('problem increasing level')
+				console.log(err)
+			}
+		)
+		STORE.set({
+			level:User.getCurrentUser().get('level')
+		})
 	},
 
 	loggedInStatus: function() {

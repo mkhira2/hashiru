@@ -7,7 +7,7 @@ import User from './models/userModel'
 var STORE = Object.assign({},Backbone.Events,{
 
 	data:{
-		userCollection: new User(),
+		usersCollection: new User(),
 		runCollection: new RunCollection(),
 		runnerCollection: new RunnerCollection(),
 		expPoints: 0,
