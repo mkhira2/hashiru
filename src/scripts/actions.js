@@ -33,7 +33,7 @@ var ACTIONS = {
 		if (User.getCurrentUser() === null || (User.getCurrentUser().get('name') === undefined)) {
 			return ''
 		}
-		return `Level ${STORE.get('level')}`
+		return `Level ${User.getCurrentUser().get('level')}`
 	},
 
 	deleteRun: function(run) {
@@ -101,7 +101,7 @@ var ACTIONS = {
 		var runner = User.getCurrentUser()
 
 		runner.set({
-			level: runner.get('level') + Number(miles)
+			level: Math.floor((runner.get('expPoints') + Number(miles)) /10)
 		})
 
 		runner.save().then(function() {
