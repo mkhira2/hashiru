@@ -43,8 +43,7 @@ var AddRunForm = React.createClass({
 			user_id: User.getCurrentUser().get('_id')
 		}
 		ACTIONS.addRun(runData)
-		ACTIONS.increaseLevel(formEl.miles.value)
-		ACTIONS.increaseExpPoints(formEl.miles.value)
+		ACTIONS.increaseExpPointsAndLevel(formEl.miles.value)
 		formEl.reset()
 	},
 
@@ -78,7 +77,6 @@ var RunList = React.createClass({
 })
 
 var SingleRun = React.createClass({
-
 	handleDelete: function() {
 		ACTIONS.deleteRun(this.props.run)
 	},

@@ -24,7 +24,20 @@ var HomePage = React.createClass({
 		return STORE.data
 	},
 
+	// updateProgressBar: function() {
+	// 	updateProgressBar.style.width = User.getCurrentUser.get('expPoints').slice(-1) + '0' + '%'
+	// },
+
 	render: function() {
+
+		var updateProgressBar = {
+		height: '11px',
+		background: 'blue',
+		textAlign: 'left',
+		margin: 0,
+		padding: 0,
+		width: User.getCurrentUser().get('expPoints') % 10 + '0%'
+	}
 
 		return (
 
@@ -34,11 +47,12 @@ var HomePage = React.createClass({
 				<div className='levelAndNumberHP'>
 					<h2>Level</h2>
 					<h2 className='levelHP'>{User.getCurrentUser().get('level')}</h2>
-					<h2>Exp Points: {User.getCurrentUser().get('expPoints')}</h2>
 				</div>
 				<div className='milesAndBarHP'>
-					<h2>Miles To Next Level</h2>
-					<div className='progressBar'></div>
+					<h2>Progress To Next Level</h2>
+					<div className='progressBarContainer'>
+						<div className='progressBar' style={updateProgressBar}></div>
+					</div>
 				</div>
 				<AchievementsContainer />
 			</div>

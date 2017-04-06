@@ -72,15 +72,13 @@ var ACTIONS = {
 			})
 		},
 
-	increaseExpPoints: function(miles) {
-		// get experience points dude. User.getCurrentUser().get('expPoints')
+	increaseExpPointsAndLevel: function(miles) {
 		var runner = User.getCurrentUser()
 
 		runner.set({
-			expPoints: runner.get('expPoints') + Number(miles)
-
+			expPoints: runner.get('expPoints') + Number(miles),
+			level: Math.floor((runner.get('expPoints') + Number(miles)) /10)
 		})
-		console.log('exp points in increaseExpPoints', runner.get('expPoints'))
 
 		runner.save().then(function() {
 			console.log('updated exp points =', User.getCurrentUser().get('expPoints'))
@@ -91,28 +89,7 @@ var ACTIONS = {
 			}
 		)
 		STORE.set({
-			expPoints:User.getCurrentUser().get('expPoints')
-
-		})
-	},
-
-	increaseLevel: function(miles) {
-		// level up dude. User.getCurrentUser().get('level')
-		var runner = User.getCurrentUser()
-
-		runner.set({
-			level: Math.floor((runner.get('expPoints') + Number(miles)) /10)
-		})
-
-		runner.save().then(function() {
-			console.log('updated level =', User.getCurrentUser().get('level'))
-		},
-			function(err) {
-				console.log('problem increasing level')
-				console.log(err)
-			}
-		)
-		STORE.set({
+			expPoints:User.getCurrentUser().get('expPoints'),
 			level:User.getCurrentUser().get('level')
 		})
 	},
