@@ -44,7 +44,7 @@ h5 {
 }
 
 p, a {
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 
 /*--------------------------------------------------
@@ -161,6 +161,7 @@ USER INFO
 	margin-top: 5px;
 	padding: 5px;
 	color: white;
+	text-shadow: 2px 2px black;
 }
 
 .nameUserInfo {
@@ -206,6 +207,7 @@ QUEST/BOSS BATTLE PAGES
 .badgeTitle {
 	color: fuchsia;
 	font-weight: bold;
+	text-shadow: 2px 2px black;
 }
 
 .questBadgeContainer {
@@ -253,6 +255,7 @@ ADD RUN PAGE
 .addRunForm h2 {
 	color: fuchsia;
 	font-weight: bold;
+	text-shadow: 2px 2px black;
 }
 
 .runList p {
