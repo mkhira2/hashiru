@@ -24,10 +24,6 @@ var HomePage = React.createClass({
 		return STORE.data
 	},
 
-	// updateProgressBar: function() {
-	// 	updateProgressBar.style.width = User.getCurrentUser.get('expPoints').slice(-1) + '0' + '%'
-	// },
-
 	render: function() {
 
 		var updateProgressBar = {

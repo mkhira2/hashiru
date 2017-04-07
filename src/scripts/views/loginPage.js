@@ -8,8 +8,10 @@ var LoginPage = React.createClass({
 		return (
 			<div className='loginPage'>
 				<Banner />
-				<LoginForm />
-				<RegisterForm />
+				<div className='firstForm'>
+					<LoginForm />
+					<RegisterForm />
+				</div>
 			</div>
 		)
 	}

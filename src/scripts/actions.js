@@ -5,6 +5,24 @@ import {Run} from './models/runModel'
 import STORE from './store'
 import $ from 'jquery'
 
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "2000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+
 var ACTIONS = {
 
 	addRun: function(runData) { 
@@ -14,10 +32,12 @@ var ACTIONS = {
 			.then(
 				function(response) {
 					console.log('run added')
+					toastr.info('Great run!')
 					ACTIONS.fetchAllRuns(runData.user_id)
 				},
 				function(error) {
-					alert('problem adding run')
+					console.log(error)
+					toastr.error('Oops! Try again.')
 				}
 			)
 	},
@@ -41,7 +61,7 @@ var ACTIONS = {
 		run.destroy()
 			.done(ACTIONS.fetchAllRuns(userID))
 			.fail(function(error) {
-					alert('problem deleting run')
+					toastr.error('Problem deleting run.')
 					console.log(error)
 				})
 	},
@@ -116,14 +136,14 @@ var ACTIONS = {
 		User.login(email, password)
 		.done(
 			function(response){
-				alert('logged in!')
+				toastr.success(`Welcome, ${response.email}!`)
 				console.log(response)
 				location.hash = 'home'
 			}
 		)
 		.fail(
 			function(error){
-				alert('problem logging in')
+				toastr.error('Incorrect email/password combination.')
 				console.log(error)
 			}
 		)
@@ -133,13 +153,13 @@ var ACTIONS = {
 		User.logout()
 		.done(
 			function(response){
-				alert('logged out')
 				location.hash = 'login'
+				toastr.success('See you again soon!')
 			}
 		)
 		.fail(
 			function(error){
-				alert('problem logging out')
+				toastr.error('You gotta log in to log out!')
 				console.log(error)
 			}
 		)
@@ -148,15 +168,14 @@ var ACTIONS = {
 	registerUser: function(userData) {
 		User.register(userData)
 		.done(
-			function(res){
-				alert(`new user ${res.email} registered!`)
-				console.log(res)
+			function(response){
+				console.log(response)
 				ACTIONS.logUserIn(userData.email, userData.password)
 			}
 		)
 		.fail(
 			function(error){
-				alert('problem registering user')
+				toastr.error('Please try again.')
 				console.log(error)
 			}
 		)

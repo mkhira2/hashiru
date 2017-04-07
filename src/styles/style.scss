@@ -71,7 +71,12 @@ a {
 }
 
 input, button {
-	font-size: 1rem;
+	font-size: 1.25rem;
+}
+
+input {
+	color: blue;
+	font-weight: bold;
 }
 
 .container {
@@ -108,10 +113,6 @@ input, button {
     height: 15px;
     margin-top: 12px;
 }
-
-// .progressBar {
-    
-// }
 
 .hidden {
 	display:none;
@@ -221,12 +222,19 @@ QUEST/BOSS BATTLE PAGES
 LOGIN PAGE
 --------------------------------------------------*/
 
-.loginForm h2 {
-	margin-top: 0;
+.loginForm, .registerForm {
+	margin: 0 auto;
+	width: 45%;
 }
 
 .loginInput, .loginButton {
 	margin: 5px;
+}
+
+.firstForm {
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
 }
 
 /*--------------------------------------------------
