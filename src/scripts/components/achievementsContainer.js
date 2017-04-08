@@ -1,14 +1,15 @@
-// import React from 'react'
+import React from 'react'
 
-// var AchievementsContainer = React.createClass({
-// 	render: function() {
+var AchievementsContainer = React.createClass({
+	render: function() {
 // 		if (User.getCurrentUser().get('fiveKBadge') === true) {
-// 			return (
+			return (
+				<div></div>
 // 				<div className='achievementsContainer'>
 // 					<img src='./images/fivekbadge.png' />
 // 				</div>
-// 			)
-// 		} 
+			)
+		} 
 // 		if (User.getCurrentUser().get('tenKBadge') === true) {
 // 			return (
 // 				<div className='achievementsContainer'>
@@ -18,9 +19,9 @@
 // 		}
 // 		return null
 // 	}
-// })
+})
 
-// export default AchievementsContainer
+export default AchievementsContainer
 
 // import React from 'react'
 
