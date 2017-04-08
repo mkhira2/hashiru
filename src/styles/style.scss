@@ -8,7 +8,7 @@ ALWAYS INCLUDE
 }
 
 img {
-	max-width: 100%;
+	width: 150px;
 }
 
 /*--------------------------------------------------
@@ -83,6 +83,10 @@ input {
 	text-align: center;
 }
 
+/*--------------------------------------------------
+HOME PAGE
+--------------------------------------------------*/
+
 .levelAndNumberHP, .milesAndBarHP, .achievementsContainer, .addRunForm, .form {
 	border: 2px solid fuchsia;
 	box-shadow: 2px 2px grey;
@@ -114,7 +118,7 @@ input {
     margin-top: 12px;
 }
 
-.hidden {
+.hiddenLinkƒ {
 	display:none;
 }
 
@@ -149,6 +153,10 @@ BANNER
 
 .navATag:hover {
 	text-decoration: none;
+}
+
+.hiddenLink {
+	display: none;
 }
 
 /*--------------------------------------------------

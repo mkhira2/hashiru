@@ -16,6 +16,7 @@ var QuestsPage = React.createClass({
 })
 
 var QuestBadgeContainer = React.createClass({
+
 	render: function() {
 		return (
 			<div className='questBadgeContainer'>

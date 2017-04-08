@@ -2,6 +2,7 @@ import Backbone from 'backbone'
 import ReactDOM from 'react-dom'
 import User from './models/userModel'
 import {Run} from './models/runModel'
+import Badges from './badges'
 import STORE from './store'
 import $ from 'jquery'
 
@@ -40,7 +41,7 @@ var ACTIONS = {
 					toastr.error('Oops! Try again.')
 				}
 			)
-	},
+	}
 
 	checkLogInName: function() {
 		if (User.getCurrentUser() === null || (User.getCurrentUser().get('name') === undefined)) {
@@ -97,7 +98,7 @@ var ACTIONS = {
 
 		runner.set({
 			expPoints: runner.get('expPoints') + Number(miles),
-			level: Math.floor((runner.get('expPoints') + Number(miles)) /10)
+			level: Math.floor((runner.get('expPoints') + Number(miles)) / 10)
 		})
 
 		runner.save().then(function() {

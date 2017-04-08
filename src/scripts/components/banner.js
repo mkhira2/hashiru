@@ -9,8 +9,9 @@ var Banner = React.createClass({
 	},
 
 	render: function() {
-		var userLoggedOut = (User.getCurrentUser()) ? 'navATag hidden' : ''
-		var userLoggedIn = (!User.getCurrentUser()) ? 'navATag hidden' : ''
+		var userLoggedOut = (User.getCurrentUser()) ? 'navATag hiddenLink' : ''
+		var userLoggedIn = (!User.getCurrentUser()) ? 'navATag hiddenLink' : ''
+		
 		return (
 			<div>
 				<div className='banner'>

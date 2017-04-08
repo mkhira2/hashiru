@@ -41,7 +41,9 @@ var AddRunForm = React.createClass({
 		var runData = {
 			run: formEl.miles.value,
 			user_id: User.getCurrentUser().get('_id')
-		}
+		}	
+		
+
 		ACTIONS.addRun(runData)
 		ACTIONS.increaseExpPointsAndLevel(formEl.miles.value)
 		formEl.reset()
@@ -54,6 +56,7 @@ var AddRunForm = React.createClass({
 					<h2>Log A Run</h2>
 					<input className='addRunInput' type='text' name='miles' placeholder='Enter miles run' />
 					<button className='addRunButton' type='submit'>Submit</button>
+					<h3>Run History</h3>
 					<RunList runs={this.props.runs} />
 				</form>
 			</div>
