@@ -179,6 +179,62 @@ var ACTIONS = {
 				console.log(error)
 			}
 		)
+	},
+
+	updateBossBattles: function() {
+		if (User.getCurrentUser().get('expPoints') > 199) {
+			User.getCurrentUser().save({
+				twoHundredMileBadge: true
+			})
+		}
+		if (User.getCurrentUser().get('expPoints') > 149) {
+			User.getCurrentUser().save({
+				oneHundredFiftyMileBadge: true
+			})
+		}
+		if (User.getCurrentUser().get('expPoints') > 99) {
+			User.getCurrentUser().save({
+				oneHundredMileBadge: true
+			})
+		}
+		if (User.getCurrentUser().get('expPoints') > 49) {
+			User.getCurrentUser().save({
+				fiftyMileBadge: true
+			})
+		}
+		if (User.getCurrentUser().get('expPoints') > 24) {
+			User.getCurrentUser().save({
+				twentyFiveMileBadge: true
+			})
+		}
+	},
+
+	updateQuests: function(miles) {
+		if (miles > 26.1) {
+				User.getCurrentUser().save({
+				marathonBadge: true
+			})
+		}
+		if (miles > 13) {
+				User.getCurrentUser().save({
+				halfMarathonBadge: true
+			})
+		}
+		if (miles > 9.9) {
+				User.getCurrentUser().save({
+				tenMileBadge: true
+			})
+		}
+		if (miles > 6.1) {
+				User.getCurrentUser().save({
+				tenKBadge: true
+			})
+		}
+		if (miles > 3) {
+				User.getCurrentUser().save({
+				fiveKBadge: true
+			})
+		}
 	}
 }
 

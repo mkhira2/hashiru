@@ -87,13 +87,17 @@ input {
 HOME PAGE
 --------------------------------------------------*/
 
-.levelAndNumberHP, .milesAndBarHP, .achievementsContainer, .addRunForm, .form {
+.topDiv, .bottomDiv {
+	display: flex;
+}
+
+.levelAndNumberHP, .milesAndBarHP, .questsContainer, .bossBattlesContainer, .addRunForm, .form {
 	border: 2px solid fuchsia;
 	box-shadow: 2px 2px grey;
 	display: inline-block;
 	padding: 5px;
-	margin: 25px 0;
-	width: 51%;
+	margin: 25px 10px;
+	width: 45%;
 	background: white;
 	opacity: .9;
 }
@@ -286,4 +290,8 @@ ADD RUN PAGE
 .deleteRun {
 	cursor: pointer;
 	text-align: center;
+}
+
+.questsContainer, .bossBattlesContainer {
+    margin: 10px;
 }

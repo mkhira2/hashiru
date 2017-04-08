@@ -1,27 +1,60 @@
 import React from 'react'
 
-var AchievementsContainer = React.createClass({
+var QuestsContainer = React.createClass({
 	render: function() {
-// 		if (User.getCurrentUser().get('fiveKBadge') === true) {
+		if (User.getCurrentUser().get('marathonBadge') === true) {
 			return (
-				<div></div>
-// 				<div className='achievementsContainer'>
-// 					<img src='./images/fivekbadge.png' />
-// 				</div>
+				<div className='questsContainer'>
+					<h4>Most Treacherous Quest</h4>
+					<img src='./images/marathonbadge.png' />
+				</div>
 			)
-		} 
-// 		if (User.getCurrentUser().get('tenKBadge') === true) {
-// 			return (
-// 				<div className='achievementsContainer'>
-// 					<img src='./images/tenkbadge.png' />
-// 				</div>
-// 			)
-// 		}
-// 		return null
-// 	}
+		}
+
+		if (User.getCurrentUser().get('halfMarathonBadge') === true) {
+			return (
+				<div className='questsContainer'>
+					<h4>Most Treacherous Quest</h4>
+					<img src='./images/halfmarathonbadge.png' />
+				</div>
+			)
+		}
+
+		if (User.getCurrentUser().get('tenMileBadge') === true) {
+			return (
+				<div className='questsContainer'>
+					<h4>Most Treacherous Quest</h4>
+					<img src='./images/tenmilebadge.png' />
+				</div>
+			)
+		}
+
+		if (User.getCurrentUser().get('tenKBadge') === true) {
+			return (
+				<div className='questsContainer'>
+					<h4>Most Treacherous Quest</h4>
+					<img src='./images/tenkbadge.png' />
+				</div>
+			)
+		}
+
+		if (User.getCurrentUser().get('fiveKBadge') === true) {
+			return (
+				<div className='questsContainer'>
+					<h4>Most Treacherous Quest</h4>
+					<img src='./images/fivekbadge.png' />
+				</div>
+			)
+		} return (
+				<div className='questsContainer'>
+					<h4>Most Treacherous Quest</h4>
+					<h5>Get running and do some quests!</h5>
+				</div>
+			)
+	} 
 })
 
-export default AchievementsContainer
+export default QuestsContainer
 
 // import React from 'react'
 
