@@ -86,11 +86,14 @@ var SingleRun = React.createClass({
 	},
 
 	render: function() {
+		var date = this.props.run.get('createdAt')
+		console.log(this.props.run)
 		return (
 			<div className="singleRun" >
 				<div className='runDiv'>
 					<p>{this.props.run.get('run') + ' miles'}</p>
 					<div onClick={this.handleDelete} className='deleteRun'>X</div>
+					<div className='runDate'>{moment(date).fromNow()}</div>
 				</div>	
 			</div>
 		)

@@ -48,7 +48,7 @@ var HomePage = React.createClass({
 							<h2 className='levelHP'>{User.getCurrentUser().get('level')}</h2>
 						</div>
 						<div className='milesAndBarHP'>
-							<h2>Progress To Next Level</h2>
+							<h2>Progress To Next Level</h2><br />
 							<div className='progressBarContainer'>
 								<div className='progressBar' style={updateProgressBar}></div>
 							</div>

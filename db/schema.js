@@ -28,6 +28,7 @@ const usersSchema = new mongoose.Schema({
 
 const runSchema = new mongoose.Schema({
 	run:         { type: Number, required: true},
+  createdAt:   { type: Date, default: Date.now },
   user_id:     { type: String, required: true}
 })
 

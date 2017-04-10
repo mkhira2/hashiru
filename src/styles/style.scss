@@ -4,6 +4,7 @@ ALWAYS INCLUDE
 
 * {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
+	// font-family: 'Press Start 2P';
 	box-sizing: border-box;
 }
 
@@ -17,6 +18,7 @@ FONT RULES
 
 html {
 	font-size: 16px;
+	// font-size: 9px;
 }
 
 a {
@@ -98,8 +100,7 @@ HOME PAGE
 	padding: 5px;
 	margin: 25px 10px;
 	width: 45%;
-	background: white;
-	opacity: .9;
+	background: rgba(255,255,255,.9);
 }
 
 .milesAndBarHP {
@@ -110,7 +111,7 @@ HOME PAGE
 	border: 2px solid black;
 	border-radius: 50%;
 	display: inline-block;
-	padding: 10px;
+	padding: 10px 10px 20px 10px;
 	background: fuchsia;
 	color: white;
 }
@@ -273,7 +274,6 @@ ADD RUN PAGE
 .runList p {
 	display: inline-block;
 	margin: 15px;
-	border: 2px solid black;
 	padding: 5px;
 }
 
@@ -281,15 +281,25 @@ ADD RUN PAGE
 	display: flex;
 	flex-wrap: wrap;
 	text-align: start;
+	justify-content: space-around;
 }
 
 .runDiv p {
 	margin-bottom: 0;
 }
 
+.runDiv {
+	border: 1px solid black;
+	text-align: center;
+	margin: 10px;
+	padding: 0 10px 10px 10px;
+	background: white;
+}
+
 .deleteRun {
 	cursor: pointer;
 	text-align: center;
+	color: red;
 }
 
 .questsContainer, .bossBattlesContainer {
