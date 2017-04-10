@@ -32,6 +32,7 @@ var LoginForm = React.createClass({
 					<input className='loginInput' type='text' name='email' placeholder='enter your email' /> <br />
 					<input className='loginInput' type='password' name='password' placeholder='enter your password' /> <br />
 					<button className='loginButton' type='submit'>Submit</button>
+					<div className='loginEmailRejection reject'></div>
 				</form>
 			</div>
 		)
@@ -59,6 +60,7 @@ var RegisterForm = React.createClass({
 					<input className='loginInput' type='text' name='email' placeholder='enter email' /><br />
 					<input className='loginInput' type='password' name='password' placeholder='create password' /><br />
 					<button className='loginButton' type='submit'>Submit</button>
+					<div className='registerEmailRejection reject'></div>
 			</form>
 			</div>
 		)

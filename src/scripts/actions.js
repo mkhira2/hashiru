@@ -133,6 +133,7 @@ var ACTIONS = {
 	},
 
 	logUserIn: function(email, password) {
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 		User.login(email, password)
 		.done(
 			function(response){
@@ -147,6 +148,10 @@ var ACTIONS = {
 				console.log(error)
 			}
 		)
+	}
+	else {
+			document.querySelector('.loginEmailRejection').innerHTML = ' Invalid email address'
+		}
 	},
 
 	logUserOut: function(){
@@ -166,6 +171,7 @@ var ACTIONS = {
 	},
 
 	registerUser: function(userData) {
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userData.email)) {
 		User.register(userData)
 		.done(
 			function(response){
@@ -179,6 +185,11 @@ var ACTIONS = {
 				console.log(error)
 			}
 		)
+	}
+	else {
+			console.log('bad email')
+			document.querySelector('.registerEmailRejection').innerHTML = 'Invalid email address'
+		}
 	},
 
 	updateBossBattles: function() {
