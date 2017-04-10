@@ -16,43 +16,44 @@ var QuestsPage = React.createClass({
 })
 
 var QuestBadgeContainer = React.createClass({
-
 	render: function() {
 
-		var achievedfivek = (User.getCurrentUser().get('fiveKBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedtenk = (User.getCurrentUser().get('tenKBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedtenmile = (User.getCurrentUser().get('tenMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedhalfmarathon = (User.getCurrentUser().get('halfMarathonBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedmarathon = (User.getCurrentUser().get('marathonBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		var achievedtwentyfive = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		var achievedfifty = (User.getCurrentUser().get('fiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		var achievedonehundred = (User.getCurrentUser().get('oneHundredMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		var achievedonehundredfifty = (User.getCurrentUser().get('oneHundredFiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		var achievedtwohundred = (User.getCurrentUser().get('twoHundredMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+
 		return (
 			<div className='questBadgeContainer'>
 				<h1 className='badgeTitle'>Quests</h1>
 				<hr />
 
-				<div className={achievedfivek}>
-					<img src='../images/fivekbadge.png' />
-					<p>Run a 5K</p>
+				<div className={achievedtwentyfive}>
+					<img src='../images/twentyfivemilebadge.png' />
+					<p>Run 25 Miles</p>
 				</div>
 
-				<div className={achievedtenk}>
-					<img src='../images/tenkbadge.png' />
-					<p>Run a 10K</p>
+				<div className={achievedfifty}>
+					<img src='../images/fiftymilebadge.png' />
+					<p>Run 50 Miles</p>
 				</div>
 
-				<div className={achievedtenmile}>
-					<img src='../images/tenmilebadge.png' />
-					<p>Run 10 Miles</p>
+				<div className={achievedonehundred}>
+					<img src='../images/onehundredmilebadge.png' />
+					<p>Run 100 Miles</p>
 				</div>
 
-				<div className={achievedhalfmarathon}>
-					<img src='../images/halfmarathonbadge.png' />
-					<p>Half Marathon</p>
+				<div className={achievedonehundredfifty}>
+					<img src='../images/onehundredfiftymilebadge.png' />
+					<p>Run 150 Miles</p>
 				</div>
 
-				<div className={achievedmarathon}>
-					<img src='../images/marathonbadge.png' />
-					<p>Marathon</p>
+				<div className={achievedtwohundred}>
+					<img src='../images/twohundredmilebadge.png' />
+					<p>Run 200 Miles</p>
 				</div>
+
 				
 			</div>
 

@@ -55,8 +55,8 @@ var HomePage = React.createClass({
 						</div>
 					</div>
 					<div className='bottomDiv'>
-						<QuestsContainer />
 						<BossBattlesContainer />
+						<QuestsContainer />
 					</div>
 				</div>
 			</div>
