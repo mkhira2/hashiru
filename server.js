@@ -64,9 +64,9 @@ app.use( appMiddleWare.parseQuery )
 // =========
 
 app.get('*', function(req,res,next) {
-	if (req.headers['X-Forwarded-Protocol']!='https')
-		res.redirect('https://' + req.get('host') + req.url)
-	else
+	// if (req.headers['X-Forwarded-Protocol']!='https')
+	// 	res.redirect('https://' + req.get('host') + req.url)
+	// else
 		next()
 })
 
