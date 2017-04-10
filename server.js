@@ -65,7 +65,7 @@ app.use( appMiddleWare.parseQuery )
 
 app.get('*', function(req,res,next) {
 	if (req.headers['x-forward-proto']!='https')
-		res.redirect('https://www.hashiruapp.com'+req.url)
+		res.redirect('https://' + req.get('host') + req.url)
 	else
 		next()
 })
