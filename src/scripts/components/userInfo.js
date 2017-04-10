@@ -15,12 +15,16 @@ var UserInfo = React.createClass({
 		padding: 0,
 		width: User.getCurrentUser().get('expPoints') % 10 + '0%'
 	}
+
+		var expNeeded = User.getCurrentUser().get('expPoints') % 10 + '0%'
+		
 	
 		return (
 			<div className='userInfo'>
 				<h2 className='nameUserInfo'>{ACTIONS.checkLogInName()}</h2>
 				<h2 className='levelUserInfo'>{ACTIONS.checkLevel()}</h2>
 				<div className='progressBar' style={updateProgressBar}></div>
+				<p>Progress toward next level: {expNeeded}</p>
 			</div>
 		)
 	}

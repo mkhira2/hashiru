@@ -156,6 +156,10 @@ BANNER
 	padding: 5px;
 }
 
+.navBar a {
+	margin: 0 25px;
+}
+
 .navATag:hover {
 	text-decoration: none;
 }
@@ -177,15 +181,21 @@ USER INFO
 	text-shadow: 2px 2px black;
 }
 
+.userInfo p {
+	margin-bottom: 0
+}
+
 .nameUserInfo {
 	position: absolute;
 	left: 0;
+	top: 20px;
 	text-shadow: 2px 2px black;
 }
 
 .levelUserInfo {
 	position: absolute;
 	right: 0;
+	top: 20px;
 	text-shadow: 2px 2px black;
 }
 
@@ -209,7 +219,7 @@ FAQ PAGE
 }
 
 /*--------------------------------------------------
-QUEST/BOSS BATTLE PAGES
+QUEST/BOSS BATTLE CONTAINER
 --------------------------------------------------*/
 
 .bossBattleBadgeContainer p, .questBadgeContainer p {
@@ -231,6 +241,19 @@ QUEST/BOSS BATTLE PAGES
 	display: inline-block;
 	margin: 10px;
 	width: 150px;
+}
+
+/*--------------------------------------------------
+QUEST/BOSS BATTLE PAGES
+--------------------------------------------------*/
+
+.runBadgeHidden {
+	display: inline-block;
+	margin: 10px;
+	width: 150px;
+	opacity: .6;
+	background: grey;
+	border: 2px solid red;
 }
 
 /*--------------------------------------------------

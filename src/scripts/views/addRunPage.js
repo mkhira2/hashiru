@@ -87,7 +87,6 @@ var SingleRun = React.createClass({
 
 	render: function() {
 		var date = this.props.run.get('createdAt')
-		console.log(this.props.run)
 		return (
 			<div className="singleRun" >
 				<div className='runDiv'>
