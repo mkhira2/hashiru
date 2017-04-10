@@ -68,16 +68,7 @@ app.get('*', function(req,res,next) {
 		next()
 	} else if (req.get('X-Forwarded-Proto') !='https' && req.get('X-Forwarded-Port')!='443') {
 		res.redirect('https://' + req.hostname + req.url)
-	}
-	// console.log('howdy', req.headers['X-Forwarded-Protocol'])
-	// console.log('goodbye', req.header['x-forward-proto'])
-	// console.log('s', req.path)
-	// console.log('oncemore', req.headers['X-Forwarded-Proto'])
-
-	// if (req.headers['X-Forwarded-Protocol']!='https')
-	// 	res.redirect('https://' + req.get('host') + req.url)
-	// else
-		
+	}		
 })
 
 app.use( '/', indexRouter )
