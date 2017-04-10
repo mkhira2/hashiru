@@ -20,8 +20,8 @@ var FAQPage = React.createClass({
 					<h5>It's easy! Just make an account. After you run, come back here and log your miles.</h5>
 					<h4>Why?</h4>
 					<h5>So you can earn online badges that aren't worth anything, of course.</h5>
-					<h4>What's the difference between a quest and a boss battle?</h4>
-					<h5>Quest badges are earned per run. Boss badges are earned as miles accumulate over time.</h5>
+					<h4>What's the difference between a boss battle and a quest?</h4>
+					<h5>Boss badges are earned per run. Quest badges are earned as miles accumulate over time.</h5>
 				</div>
 			</div>
 		)
