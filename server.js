@@ -63,6 +63,13 @@ app.use( appMiddleWare.parseQuery )
 // ROUTERS
 // =========
 
+app.get('*', function(req,res,next) {
+	if (req.headers['x-forward-proto']!='https')
+		res.redirect('https://hashiruapp.com'+req.url)
+	else
+		next()
+})
+
 app.use( '/', indexRouter )
 app.use( '/auth', authRouter )
 app.use( '/api', apiRouter )
