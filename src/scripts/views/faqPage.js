@@ -11,6 +11,7 @@ var FAQPage = React.createClass({
 				<UserInfo />
 				<br /><br />
 				<div className='faqs'>
+					<h2>FAQ's</h2>
 					<h4>What the heck does Hashiru mean, anyway?</h4>
 					<h5>Hashiru is the Japanese word for "run"</h5>
 					<h4>So, why should I Hashiru?</h4>

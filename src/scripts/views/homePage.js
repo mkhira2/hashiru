@@ -40,7 +40,7 @@ var HomePage = React.createClass({
 
 			<div className='homePage'>
 				<Banner />
-				<h1 className='userInfo'>{ACTIONS.checkLogInName()}</h1>
+				<h1 className='userInfo'>{ACTIONS.checkLogInName()+ "'s status"}</h1>
 				<div className='homeDiv'>
 					<div className='topDiv'>
 						<div className='levelAndNumberHP'>

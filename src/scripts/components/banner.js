@@ -22,9 +22,9 @@ var Banner = React.createClass({
 				</div>
 				<nav className='navBar'>
 				<a className={userLoggedIn} href='#home'>My Account</a>
+				{this.runLink()}
 				<a className={userLoggedIn} href='#quests'>Quests</a>
 				<a className={userLoggedIn} href='#bossbattles'>Boss Battles</a>
-				{this.runLink()}
 				<a className={userLoggedIn} href='#faq'>FAQ</a>
 				<a className={userLoggedOut} href='#login'>Log In</a>
 				<a className={userLoggedIn} onClick={ACTIONS.logUserOut}>Log Out</a>

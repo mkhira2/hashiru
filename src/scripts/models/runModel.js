@@ -16,6 +16,9 @@ export var RunnerCollection = Backbone.Collection.extend({
 })
 
 export var RunCollection = Backbone.Collection.extend({
+	comparator: function(run) {
+	return new Date(run.get('createdAt')).getTime() *-1
+},
 	model: Run,
 	url: '/api/runs'
 })
