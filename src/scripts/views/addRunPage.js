@@ -43,8 +43,8 @@ var AddRunForm = React.createClass({
 			user_id: User.getCurrentUser().get('_id')
 		}	
 		
-		ACTIONS.increaseExpPointsAndLevel(formEl.miles.value)
 		ACTIONS.addRun(runData)
+		ACTIONS.increaseExpPointsAndLevel(formEl.miles.value)
 		ACTIONS.updateQuests(formEl.miles.value)
 		ACTIONS.updateBossBattles()
 		formEl.reset()
