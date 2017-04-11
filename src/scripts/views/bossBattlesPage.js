@@ -27,6 +27,8 @@ var BossBattleBadgeContainer = React.createClass({
 		var achievedtenmileo = (User.getCurrentUser().get('tenMileBadge') === false) ? 'overlay' : ''
 		var achievedhalfmarathon = (User.getCurrentUser().get('halfMarathonBadge') === false) ? 'runBadge' : 'runBadgeHidden'
 		var achievedhalfmarathono = (User.getCurrentUser().get('halfMarathonBadge') === false) ? 'overlay' : ''
+		var achievedeighteenmile = (User.getCurrentUser().get('eighteenMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		var achievedeighteenmileo = (User.getCurrentUser().get('eighteenMileBadge') === false) ? 'overlay' : ''
 		var achievedmarathon = (User.getCurrentUser().get('marathonBadge') === false) ? 'runBadge' : 'runBadgeHidden'
 		var achievedmarathono = (User.getCurrentUser().get('marathonBadge') === false) ? 'overlay' : ''
 		return (
@@ -59,6 +61,13 @@ var BossBattleBadgeContainer = React.createClass({
 					<div className={achievedhalfmarathono}>
 						<img src='../images/halfmarathonbadge.png' />
 						<p>Half Marathon</p>
+					</div>
+				</div>
+
+				<div className={achievedeighteenmile}>
+					<div className={achievedeighteenmileo}>
+						<img src='../images/eighteenmilebadge.png' />
+						<p>Run 18 Miles</p>
 					</div>
 				</div>
 

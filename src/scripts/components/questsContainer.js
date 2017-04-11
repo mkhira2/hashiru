@@ -2,6 +2,16 @@ import React from 'react'
 
 var QuestsContainer = React.createClass({
 	render: function() {
+
+		if (User.getCurrentUser().get('twoHundredFiftyMileBadge') === true) {
+			return (
+				<div className='questsContainer'>
+					<h4>Most Treacherous Quest</h4>
+					<img src='./images/twohundredfiftymilebadge.png' />
+				</div>
+			)
+		}
+
 		if (User.getCurrentUser().get('twoHundredMileBadge') === true) {
 			return (
 				<div className='questsContainer'>

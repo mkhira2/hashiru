@@ -21,13 +21,16 @@ var QuestBadgeContainer = React.createClass({
 		var achievedtwentyfive = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
 		var achievedtwentyfiveo = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'overlay' : ''
 		var achievedfifty = (User.getCurrentUser().get('fiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedfiftyo = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'overlay' : ''
+		var achievedfiftyo = (User.getCurrentUser().get('fiftyMileBadge') === false) ? 'overlay' : ''
 		var achievedonehundred = (User.getCurrentUser().get('oneHundredMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedonehundredo = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'overlay' : ''
+		var achievedonehundredo = (User.getCurrentUser().get('oneHundredMileBadge') === false) ? 'overlay' : ''
 		var achievedonehundredfifty = (User.getCurrentUser().get('oneHundredFiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedonehundredfiftyo = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'overlay' : ''
+		var achievedonehundredfiftyo = (User.getCurrentUser().get('oneHundredFiftyMileBadge') === false) ? 'overlay' : ''
 		var achievedtwohundred = (User.getCurrentUser().get('twoHundredMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedtwohundredo = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'overlay' : ''
+		var achievedtwohundredo = (User.getCurrentUser().get('twoHundredMileBadge') === false) ? 'overlay' : ''
+		var achievedtwohundredfifty = (User.getCurrentUser().get('twoHundredFiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		var achievedtwohundredfiftyo = (User.getCurrentUser().get('twoHundredFiftyMileBadge') === false) ? 'overlay' : ''
+
 
 		return (
 			<div className='questBadgeContainer'>
@@ -66,6 +69,13 @@ var QuestBadgeContainer = React.createClass({
 					<div className={achievedtwohundredo}>
 						<img src='../images/twohundredmilebadge.png' />
 						<p>Run 200 Miles</p>
+					</div>
+				</div>
+
+				<div className={achievedtwohundredfifty}>
+					<div className={achievedtwohundredfiftyo}>
+						<img src='../images/twohundredfiftymilebadge.png' />
+						<p>Run 250 Miles</p>
 					</div>
 				</div>
 

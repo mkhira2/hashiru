@@ -2,11 +2,21 @@ import React from 'react'
 
 var BossBattlesContainer = React.createClass({
 	render: function() {
+
 		if (User.getCurrentUser().get('marathonBadge') === true) {
 			return (
 				<div className='bossBattlesContainer'>
 					<h4>Baddest Boss Defeated</h4>
 					<img src='./images/marathonbadge.png' />
+				</div>
+			)
+		}
+
+		if (User.getCurrentUser().get('eighteenMileBadge') === true) {
+			return (
+				<div className='bossBattlesContainer'>
+					<h4>Baddest Boss Defeated</h4>
+					<img src='./images/eighteenmilebadge.png' />
 				</div>
 			)
 		}

@@ -17,7 +17,6 @@ var UserInfo = React.createClass({
 	}
 
 		var expNeeded = User.getCurrentUser().get('expPoints') % 10 + '0%'
-		
 	
 		return (
 			<div className='userInfo'>

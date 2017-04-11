@@ -17,13 +17,15 @@ const usersSchema = new mongoose.Schema({
   fiveKBadge:               { type: Boolean, default: false },
   tenKBadge:                { type: Boolean, default: false },
   tenMileBadge:             { type: Boolean, default: false },
+  eighteenMileBadge:        { type: Boolean, default: false},
   halfMarathonBadge:        { type: Boolean, default: false},
   marathonBadge:            { type: Boolean, default: false},
   twentyFiveMileBadge:      { type: Boolean, default: false},
   fiftyMileBadge:           { type: Boolean, default: false},
   oneHundredMileBadge:      { type: Boolean, default: false},
   oneHundredFiftyMileBadge: { type: Boolean, default: false},
-  twoHundredMileBadge:      { type: Boolean, default: false}
+  twoHundredMileBadge:      { type: Boolean, default: false},
+  twoHundredFiftyMileBadge: { type: Boolean, default: false}
 }) 
 
 const runSchema = new mongoose.Schema({

@@ -193,27 +193,32 @@ var ACTIONS = {
 	},
 
 	updateBossBattles: function() {
-		if (User.getCurrentUser().get('expPoints') > 199) {
+		if (User.getCurrentUser().get('expPoints') > 249.9) {
+			User.getCurrentUser().save({
+				twoHundredFiftyMileBadge: true
+			})
+		}
+		if (User.getCurrentUser().get('expPoints') > 199.9) {
 			User.getCurrentUser().save({
 				twoHundredMileBadge: true
 			})
 		}
-		if (User.getCurrentUser().get('expPoints') > 149) {
+		if (User.getCurrentUser().get('expPoints') > 149.9) {
 			User.getCurrentUser().save({
 				oneHundredFiftyMileBadge: true
 			})
 		}
-		if (User.getCurrentUser().get('expPoints') > 99) {
+		if (User.getCurrentUser().get('expPoints') > 99.9) {
 			User.getCurrentUser().save({
 				oneHundredMileBadge: true
 			})
 		}
-		if (User.getCurrentUser().get('expPoints') > 49) {
+		if (User.getCurrentUser().get('expPoints') > 49.9) {
 			User.getCurrentUser().save({
 				fiftyMileBadge: true
 			})
 		}
-		if (User.getCurrentUser().get('expPoints') > 24) {
+		if (User.getCurrentUser().get('expPoints') > 24.9) {
 			User.getCurrentUser().save({
 				twentyFiveMileBadge: true
 			})
@@ -224,6 +229,11 @@ var ACTIONS = {
 		if (miles > 26.1) {
 				User.getCurrentUser().save({
 				marathonBadge: true
+			})
+		}
+		if (miles > 17.9) {
+				User.getCurrentUser().save({
+				eighteenMileBadge: true
 			})
 		}
 		if (miles > 13) {
