@@ -33,7 +33,7 @@ var ACTIONS = {
 				function(response) {
 					console.log('run added')
 					toastr.info('Great run!')
-					ACTIONS.fetchAllRuns(runData.user_id, runData.run)
+					ACTIONS.fetchAllRuns(runData.user_id)
 				},
 				function(error) {
 					console.log(error)
@@ -66,8 +66,7 @@ var ACTIONS = {
 				})
 	},
 
-	fetchAllRuns: function(inputID, miles) { 
-		console.log(miles)
+	fetchAllRuns: function(inputID) { 
 		var runColl = STORE.get('runCollection')
 		runColl.fetch({
 			data: {
@@ -75,7 +74,6 @@ var ACTIONS = {
 			}
 		})
 			.then(function(){
-				ACTIONS.increaseExpPointsAndLevel(miles)
 				STORE.set({
 					runCollection: runColl
 				})
