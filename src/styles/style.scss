@@ -11,8 +11,9 @@ ALWAYS INCLUDE
 }
 
 img {
-	max-width: 150px;
 	padding: 10px;
+	width: 150px;
+	height: 150px;
 }
 
 /*--------------------------------------------------
@@ -225,7 +226,7 @@ USER INFO
 	position: absolute;
 	right: 0;
 	top: 20px;
-	text-shadow: 2px 2px white;
+	text-shadow: 2px 2px black;
 }
 
 /*--------------------------------------------------
@@ -294,9 +295,13 @@ QUEST/BOSS BATTLE PAGES
 
 .overlay {
 	background: black;
-	opacity: .2;
+	opacity: .3;
 	padding-bottom: 5px;
 	border-radius: 10%;
+}
+
+.block {
+	display: flex;
 }
 
 /*--------------------------------------------------

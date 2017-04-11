@@ -33,7 +33,7 @@ var ACTIONS = {
 				function(response) {
 					console.log('run added')
 					toastr.info('Great run!')
-					ACTIONS.fetchAllRuns(runData.user_id)
+					ACTIONS.fetchAllRuns(runData.user_id, runData.run)
 				},
 				function(error) {
 					console.log(error)
@@ -50,7 +50,7 @@ var ACTIONS = {
 	},
 
 	checkLevel: function() {
-		if (User.getCurrentUser() === null || (User.getCurrentUser().get('name') === undefined)) {
+		if (User.getCurrentUser().get('level') === null || (User.getCurrentUser().get('level') === undefined)) {
 			return ''
 		}
 		return `Level ${User.getCurrentUser().get('level')}`
@@ -66,7 +66,8 @@ var ACTIONS = {
 				})
 	},
 
-	fetchAllRuns: function(inputID) { 
+	fetchAllRuns: function(inputID, miles) { 
+		console.log(miles)
 		var runColl = STORE.get('runCollection')
 		runColl.fetch({
 			data: {
@@ -74,6 +75,7 @@ var ACTIONS = {
 			}
 		})
 			.then(function(){
+				ACTIONS.increaseExpPointsAndLevel(miles)
 				STORE.set({
 					runCollection: runColl
 				})
