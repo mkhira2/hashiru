@@ -11,6 +11,7 @@ import AddRunPage from './views/addRunPage'
 import FAQPage from './views/faqPage'
 import BossBattlesPage from './views/bossBattlesPage'
 import QuestsPage from './views/questsPage'
+import TrainingPlanPage from './views/trainingPlanPage'
 
 
 const app = function() {
@@ -23,6 +24,7 @@ const app = function() {
             'faq': 'renderFAQPage',
             'bossbattles': 'renderBossBattlesPage',
             'quests': 'renderQuestsPage',
+            'trainingplan': 'renderTrainingPlanPage',
             '*default': 'handleRedirect'
         },
 
@@ -48,6 +50,10 @@ const app = function() {
 
         renderQuestsPage: function() {
             ReactDOM.render(<QuestsPage />, document.querySelector('.container'))
+        },
+
+        renderTrainingPlanPage: function() {
+            ReactDOM.render(<TrainingPlanPage />, document.querySelector('.container'))
         },
 
         handleRedirect() {

@@ -2,9 +2,11 @@
 ALWAYS INCLUDE
 --------------------------------------------------*/
 
+// font-family: 'Press Start 2P';
+// font-size: 9px;
+
 * {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-	// font-family: 'Press Start 2P';
 	box-sizing: border-box;
 }
 
@@ -18,7 +20,6 @@ FONT RULES
 
 html {
 	font-size: 16px;
-	// font-size: 9px;
 }
 
 a {
@@ -368,4 +369,40 @@ ADD RUN PAGE
 
 .questsContainer, .bossBattlesContainer {
     margin: 10px;
+}
+
+/*--------------------------------------------------
+TRAINING PLAN PAGE
+--------------------------------------------------*/
+
+.trainingPlanTable {
+	width: 80%;
+	margin: 50px auto;
+	background: rgba(242,242,205,.9);
+	box-shadow: 2px 2px grey;
+	border: 2px solid fuchsia;
+	padding: 10px;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.trainingPlanTitle {
+	color: fuchsia;
+	font-weight: bold;
+	text-shadow: 2px 2px black;
+}
+
+th {
+	text-align: center;
+	padding-bottom: 10px;
+	color: fuchsia;
+}
+
+td {
+	padding: 10px;
+	border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background: #eee;
 }
