@@ -275,13 +275,10 @@ QUEST/BOSS BATTLE CONTAINER
 }
 
 .runBadge {
-	
 	display: inline-block;
 	margin: 10px;
-	opacity: .4;
-	background: grey;
-	border: 2px solid red;
-	padding: .5rem;
+	background: black;
+	border-radius: 10%;
 }
 
 /*--------------------------------------------------
@@ -291,6 +288,14 @@ QUEST/BOSS BATTLE PAGES
 .runBadgeHidden {
 	display: inline-block;
 	margin: 10px;
+	border-radius: 10%;
+}
+
+.overlay {
+	background: black;
+	opacity: .2;
+	padding-bottom: 5px;
+	border-radius: 10%;
 }
 
 /*--------------------------------------------------
