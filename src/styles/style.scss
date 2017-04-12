@@ -4,7 +4,6 @@ ALWAYS INCLUDE
 
 // font-family: 'Press Start 2P';
 // font-size: 9px;
-
 * {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	box-sizing: border-box;
@@ -15,6 +14,13 @@ img {
 	width: 150px;
 	height: 150px;
 }
+
+/*--------------------------------------------------
+COLOR VARIABLES
+--------------------------------------------------*/
+
+$hashbrown: #654321;
+
 
 /*--------------------------------------------------
 FONT RULES
@@ -80,7 +86,7 @@ input, button {
 }
 
 input {
-	color: #654321;
+	color: $hashbrown;
 	font-weight: bold;
 }
 
@@ -99,7 +105,7 @@ HOME PAGE
 .homeDiv h2, .homeDiv h4 {
 	font-family: 'Press Start 2P';
 	font-size: 18px;
-	color: #654321;
+	color: $hashbrown;
 }
 
 h2.levelHP {
@@ -159,7 +165,7 @@ form.form.addRunForm h3 {
 
 .homeTotalMiles {
 	margin-top: 2px;
-	color: #654321;
+	color: $hashbrown;
 }
 
 /*--------------------------------------------------
@@ -179,7 +185,7 @@ BANNER
 
 .title {
 	background: rgba(0,0,0,.3);
-	color: #654321;
+	color: $hashbrown;
 	margin: 0;
 	padding: 5px;
 	font-family: 'Oleo Script', cursive;
@@ -261,7 +267,7 @@ FAQ PAGE
 
 .faqs h5 {
 	margin-bottom: 25px;
-	color: #654321;
+	color: $hashbrown;
 }
 
 /*--------------------------------------------------
@@ -320,6 +326,10 @@ LOGIN PAGE
 	width: 45%;
 }
 
+.loginForm h2, .registerForm h2 {
+	color: $hashbrown;
+}
+
 .loginInput, .loginButton {
 	margin: 5px;
 }
@@ -344,7 +354,7 @@ LOGIN PAGE
 }
 
 .infoSpan {
-	color: #654321;
+	color: $hashbrown;
 }
 
 /*--------------------------------------------------
@@ -381,7 +391,7 @@ ADD RUN PAGE
 
 form.form.addRunForm p {
 	margin-bottom: 0;
-	color: #654321;
+	color: $hashbrown;
 }
 
 .runDiv {
@@ -432,6 +442,7 @@ th {
 td {
 	padding: 10px;
 	border: 1px solid black;
+	color: $hashbrown;
 }
 
 tr:nth-child(even) {
