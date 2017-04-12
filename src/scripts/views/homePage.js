@@ -51,6 +51,7 @@ var HomePage = React.createClass({
 							<h2>Progress To Next Level</h2><br />
 							<div className='progressBarContainer'>
 								<div className='progressBar' style={updateProgressBar}></div>
+								<p className='homeTotalMiles'>Total Miles Run: {User.getCurrentUser().get('expPoints')}</p>
 							</div>
 						</div>
 					</div>

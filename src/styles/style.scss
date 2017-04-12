@@ -157,6 +157,10 @@ form.form.addRunForm h3 {
 	display:none;
 }
 
+.homeTotalMiles {
+	margin-top: 2px;
+}
+
 /*--------------------------------------------------
 BANNER
 --------------------------------------------------*/
@@ -174,11 +178,9 @@ BANNER
 
 .title {
 	background: rgba(0,0,0,.3);
-	// color: white;
 	color: #654321;
 	margin: 0;
 	padding: 5px;
-	// font-family: 'Press Start 2P', cursive;
 	font-family: 'Oleo Script', cursive;
 	font-style: italic;
 }
@@ -375,8 +377,9 @@ ADD RUN PAGE
 	justify-content: space-around;
 }
 
-.runDiv p {
+form.form.addRunForm p {
 	margin-bottom: 0;
+	color: #654321;
 }
 
 .runDiv {
