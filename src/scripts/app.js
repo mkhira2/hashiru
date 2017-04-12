@@ -12,6 +12,7 @@ import FAQPage from './views/faqPage'
 import BossBattlesPage from './views/bossBattlesPage'
 import QuestsPage from './views/questsPage'
 import TrainingPlanPage from './views/trainingPlanPage'
+import FAQPageLoggedOut from './views/faqPageLoggedOut'
 
 
 const app = function() {
@@ -25,6 +26,7 @@ const app = function() {
             'bossbattles': 'renderBossBattlesPage',
             'quests': 'renderQuestsPage',
             'trainingplan': 'renderTrainingPlanPage',
+            'faqloggedout': 'renderFAQLoggedOutPage',
             '*default': 'handleRedirect'
         },
 
@@ -50,6 +52,10 @@ const app = function() {
 
         renderQuestsPage: function() {
             ReactDOM.render(<QuestsPage />, document.querySelector('.container'))
+        },
+
+        renderFAQLoggedOutPage: function() {
+            ReactDOM.render(<FAQPageLoggedOut />, document.querySelector('.container'))
         },
 
         renderTrainingPlanPage: function() {

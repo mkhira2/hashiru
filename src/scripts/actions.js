@@ -247,6 +247,7 @@ var ACTIONS = {
 			})
 		}
 		if (miles > 6.1) {
+			console.log(miles)
 				User.getCurrentUser().save({
 				tenKBadge: true
 			})

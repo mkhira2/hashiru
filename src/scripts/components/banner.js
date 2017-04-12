@@ -28,6 +28,7 @@ var Banner = React.createClass({
 				{this.runLink()}
 				<a className={userLoggedIn} href='#faq'>FAQ</a>
 				<a className={userLoggedOut} href='#login'>Log In</a>
+				<a className={userLoggedOut} href='#faqloggedout'>FAQ</a>
 				<a className={userLoggedIn} onClick={ACTIONS.logUserOut}>Log Out</a>
 				</nav>
 			</div>
