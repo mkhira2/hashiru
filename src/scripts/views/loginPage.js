@@ -11,6 +11,7 @@ var LoginPage = React.createClass({
 				<div className='firstForm'>
 					<LoginForm />
 					<RegisterForm />
+					<InfoBox />
 				</div>
 			</div>
 		)
@@ -62,6 +63,20 @@ var RegisterForm = React.createClass({
 					<button className='loginButton' type='submit'>Submit</button>
 					<div className='registerEmailRejection reject'></div>
 			</form>
+			</div>
+		)
+	}
+})
+
+var InfoBox = React.createClass({
+	render: function() {
+		return (
+			<div className='form infoBox'>
+				<h3 className='welcome'>Welcome to Hashiru</h3>
+				<h4>A running app designed to encourage you to run 
+				<span className='fuchsia'> farther</span>, 
+				<span className='fuchsia'> faster</span>, and 
+				<span className='fuchsia'> more often</span>. Enjoy!</h4>
 			</div>
 		)
 	}
