@@ -311,8 +311,8 @@ QUEST/BOSS BATTLE PAGES
 LOGIN PAGE
 --------------------------------------------------*/
 
-.loginForm, .registerForm {
-	margin: 0 auto;
+.loginForm, .registerForm, .infoBox {
+	margin: 0 20px;
 	width: 45%;
 }
 
@@ -331,13 +331,8 @@ LOGIN PAGE
 	color: red;
 }
 
-.infoBox {
-	position: fixed;
-	margin-top: 325px;
-}
-
 .welcome {
-	color: #654321;
+	color: gold;
 }
 
 .infoBox h4 {

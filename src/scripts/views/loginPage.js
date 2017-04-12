@@ -10,8 +10,8 @@ var LoginPage = React.createClass({
 				<Banner />
 				<div className='firstForm'>
 					<LoginForm />
-					<RegisterForm />
 					<InfoBox />
+					<RegisterForm />
 				</div>
 			</div>
 		)
@@ -40,6 +40,20 @@ var LoginForm = React.createClass({
 	}
 })
 
+var InfoBox = React.createClass({
+	render: function() {
+		return (
+			<div className='form infoBox'>
+				<h3 className='welcome'>Welcome to Hashiru</h3>
+				<h4>A running app designed to encourage you to run 
+				<span className='infoSpan'> farther</span>, 
+				<span className='infoSpan'> faster</span>, and 
+				<span className='infoSpan'> more often</span>. Enjoy!</h4>
+			</div>
+		)
+	}
+})
+
 var RegisterForm = React.createClass({
 	_handleSubmit: function(evtObj){
 		evtObj.preventDefault()
@@ -63,20 +77,6 @@ var RegisterForm = React.createClass({
 					<button className='loginButton' type='submit'>Submit</button>
 					<div className='registerEmailRejection reject'></div>
 			</form>
-			</div>
-		)
-	}
-})
-
-var InfoBox = React.createClass({
-	render: function() {
-		return (
-			<div className='form infoBox'>
-				<h3 className='welcome'>Welcome to Hashiru</h3>
-				<h4>A running app designed to encourage you to run 
-				<span className='infoSpan'> farther</span>, 
-				<span className='infoSpan'> faster</span>, and 
-				<span className='infoSpan'> more often</span>. Enjoy!</h4>
 			</div>
 		)
 	}
