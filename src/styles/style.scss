@@ -80,7 +80,7 @@ input, button {
 }
 
 input {
-	color: blue;
+	color: #654321;
 	font-weight: bold;
 }
 
@@ -99,7 +99,7 @@ HOME PAGE
 .homeDiv h2, .homeDiv h4 {
 	font-family: 'Press Start 2P';
 	font-size: 18px;
-	color: #996699;
+	color: #654321;
 }
 
 h2.levelHP {
@@ -173,12 +173,14 @@ BANNER
 }
 
 .title {
-	font-style: italic;
 	background: rgba(0,0,0,.3);
-	color: white;
+	// color: white;
+	color: #654321;
 	margin: 0;
 	padding: 5px;
+	// font-family: 'Press Start 2P', cursive;
 	font-family: 'Oleo Script', cursive;
+	font-style: italic;
 }
 
 .navBar {
@@ -207,12 +209,13 @@ USER INFO
 	background: rgba(0,0,0,.3);
 	margin-top: 5px;
 	padding: 5px;
-	color: white;
+	color: gold;
 	text-shadow: 2px 2px black;
 }
 
 .userInfo p {
-	margin-bottom: 0
+	margin-bottom: 0;
+	color: white;
 }
 
 .nameUserInfo {
@@ -334,15 +337,15 @@ LOGIN PAGE
 }
 
 .welcome {
-	color: fuchsia;
+	color: #654321;
 }
 
 .infoBox h4 {
 	color: teal;
 }
 
-.fuchsia {
-	color: fuchsia;
+.infoSpan {
+	color: #654321;
 }
 
 /*--------------------------------------------------

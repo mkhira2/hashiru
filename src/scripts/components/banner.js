@@ -15,10 +15,10 @@ var Banner = React.createClass({
 		return (
 			<div>
 				<div className='banner'>
-					<p className='quote'>run</p>
+					<p className='quote'>The greatest wealth is health.</p>
 				</div>
 				<div>
-					<h1 className='title'>HASHIRU.</h1>
+					<h1 className='title'>HASHIRU</h1>
 				</div>
 				<nav className='navBar'>
 				<a className={userLoggedIn} href='#home'>My Account</a>

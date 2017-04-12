@@ -74,9 +74,9 @@ var InfoBox = React.createClass({
 			<div className='form infoBox'>
 				<h3 className='welcome'>Welcome to Hashiru</h3>
 				<h4>A running app designed to encourage you to run 
-				<span className='fuchsia'> farther</span>, 
-				<span className='fuchsia'> faster</span>, and 
-				<span className='fuchsia'> more often</span>. Enjoy!</h4>
+				<span className='infoSpan'> farther</span>, 
+				<span className='infoSpan'> faster</span>, and 
+				<span className='infoSpan'> more often</span>. Enjoy!</h4>
 			</div>
 		)
 	}

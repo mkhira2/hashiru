@@ -9,7 +9,7 @@ var UserInfo = React.createClass({
 
 		var updateProgressBar = {
 		height: '11px',
-		background: 'blue',
+		background: 'navy',
 		textAlign: 'left',
 		margin: 0,
 		padding: 0,
