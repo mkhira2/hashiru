@@ -10,7 +10,7 @@ const UserAuthModel = Backbone.Model.extend({
 
 UserAuthModel.register = function(newUserData) {
 	if(typeof newUserData !== 'object') {  throw new Error("User.register needs to be of type object with email & password properties") }
-	if(!newUserData.email || !newUserData.password) {  throw new Error("object needs email + password properties") }
+	if(!newUserData.email || !newUserData.password || !newUserData.name) {  throw new Error("object needs email + password properties") }
 
 	return $.ajax({
 		method: 'POST',
@@ -61,10 +61,11 @@ UserAuthModel.getCurrentUser = function() {
 // but, you may extend the UserAuthModel Constructor (which is a Backbone Model)
 const User = UserAuthModel.extend({
 	initialize: function(){
-		this.on('sync change update', this.updateCurrentUser.bind(this))
+		this.on('sync change update',this.updateCurrentUser.bind(this))
 	},
 
 	updateCurrentUser: function() {
+		console.log('setting local storage')
 		localStorage.setItem('hashiru_user', JSON.stringify(this.attributes))
 	}
 })

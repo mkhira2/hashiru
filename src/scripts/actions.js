@@ -95,23 +95,23 @@ var ACTIONS = {
 	increaseExpPointsAndLevel: function(miles) {
 		var runner = User.getCurrentUser()
 
-		runner.set({
-			expPoints: runner.get('expPoints') + Number(miles),
-			level: Math.floor((runner.get('expPoints') + Number(miles)) / 10)
-		})
+		var expPoints = runner.get('expPoints') + Number(miles)
+		var level = Math.floor((runner.get('expPoints') + Number(miles)) / 10)
 
-		runner.save().then(function() {
-			console.log('updated exp points =', User.getCurrentUser().get('expPoints'))
+		User.getCurrentUser().save({expPoints:expPoints, level:level})
+		.then(function(user) {
+			console.log(user)
+			STORE.set({
+				expPoints:user.expPoints,
+				level:user.level
+			})
 		},
 			function(err) {
 				console.log('problem increasing exp points')
 				console.log(err)
 			}
 		)
-		STORE.set({
-			expPoints:User.getCurrentUser().get('expPoints'),
-			level:User.getCurrentUser().get('level')
-		})
+		
 	},
 
 	loggedInStatus: function() {
@@ -192,71 +192,85 @@ var ACTIONS = {
 		}
 	},
 
-	updateBossBattles: function() {
-		if (User.getCurrentUser().get('expPoints') > 249.9) {
-			User.getCurrentUser().save({
-				twoHundredFiftyMileBadge: true
-			})
-		}
-		if (User.getCurrentUser().get('expPoints') > 199.9) {
-			User.getCurrentUser().save({
-				twoHundredMileBadge: true
-			})
-		}
-		if (User.getCurrentUser().get('expPoints') > 149.9) {
-			User.getCurrentUser().save({
-				oneHundredFiftyMileBadge: true
-			})
-		}
-		if (User.getCurrentUser().get('expPoints') > 99.9) {
-			User.getCurrentUser().save({
-				oneHundredMileBadge: true
-			})
-		}
-		if (User.getCurrentUser().get('expPoints') > 49.9) {
-			User.getCurrentUser().save({
-				fiftyMileBadge: true
-			})
-		}
-		if (User.getCurrentUser().get('expPoints') > 24.9) {
-			User.getCurrentUser().save({
-				twentyFiveMileBadge: true
-			})
-		}
-	},
+updateUserInfo: function(miles) {
 
-	updateQuests: function(miles) {
-		if (miles > 26.1) {
-				User.getCurrentUser().save({
-				marathonBadge: true
-			})
+	var runner = User.getCurrentUser()
+
+	var expPoints = runner.get('expPoints') + Number(miles)
+	var level = Math.floor((runner.get('expPoints') + Number(miles)) / 10)
+	console.log(expPoints,level)
+	var twoHundredFiftyMileBadge = false
+	var twoHundredMileBadge = false
+	var	oneHundredFiftyMileBadge = false
+	var	oneHundredMileBadge = false
+	var	fiftyMileBadge = false
+	var	twentyFiveMileBadge = false
+	var	marathonBadge = false
+	var	eighteenMileBadge = false
+	var	halfMarathonBadge =false
+	var	tenMileBadge =false
+	var	tenKBadge = false
+	var	fiveKBadge =false
+
+		if (expPoints > 249) {
+			twoHundredFiftyMileBadge = true
 		}
-		if (miles > 17.9) {
-				User.getCurrentUser().save({
-				eighteenMileBadge: true
-			})
+		if (expPoints> 199) {
+			twoHundredMileBadge =  true
+		}
+		if (expPoints > 149) {
+			oneHundredFiftyMileBadge = true
+		}
+		if (expPoints> 99) {
+			oneHundredMileBadge =true
+		}
+		if (expPoints > 49) {
+			fiftyMileBadge =true
+		}
+		if (expPoints > 24) {
+			twentyFiveMileBadge =true
+		}
+		if (miles > 26) {
+			marathonBadge = true
+		}
+		if (miles > 17) {
+			 eighteenMileBadge = true
 		}
 		if (miles > 13) {
-				User.getCurrentUser().save({
-				halfMarathonBadge: true
-			})
+			halfMarathonBadge = true
 		}
-		if (miles > 9.9) {
-				User.getCurrentUser().save({
-				tenMileBadge: true
-			})
+		if (miles > 9) {
+			tenMileBadge = true
 		}
-		if (miles > 6.1) {
-			console.log(miles)
-				User.getCurrentUser().save({
-				tenKBadge: true
-			})
+		if (miles > 6) {
+			tenKBadge = true
 		}
 		if (miles > 3) {
-				User.getCurrentUser().save({
-				fiveKBadge: true
-			})
+			fiveKBadge = true
 		}
+
+		User.getCurrentUser().save({
+			expPoints: expPoints, 
+			level: level,
+			twoHundredFiftyMileBadge : twoHundredFiftyMileBadge,
+			twoHundredMileBadge : twoHundredMileBadge,
+			oneHundredFiftyMileBadge : oneHundredFiftyMileBadge,
+			oneHundredMileBadge : oneHundredMileBadge,
+			fiftyMileBadge : fiftyMileBadge,
+			twentyFiveMileBadge : twentyFiveMileBadge,
+			marathonBadge : marathonBadge,
+			eighteenMileBadge : eighteenMileBadge,
+			halfMarathonBadge : halfMarathonBadge,
+			tenMileBadge : tenMileBadge,
+			tenKBadge : tenKBadge,
+			fiveKBadge : fiveKBadge
+		})
+		.then(function(user) {
+			console.log(user)
+			STORE.set({
+				usersCollection:user
+			})
+		})
 	}
 }
 
