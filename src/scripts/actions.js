@@ -31,7 +31,6 @@ var ACTIONS = {
 		newRun.save()
 			.then(
 				function(response) {
-					toastr.info('Great run!')
 					ACTIONS.fetchAllRuns(runData.user_id)
 				},
 				function(error) {
@@ -209,6 +208,12 @@ updateUserInfo: function(miles) {
 	var	tenMileBadge = runner.get('tenMileBadge')
 	var	tenKBadge = runner.get('tenKBadge')
 	var	fiveKBadge = runner.get('fiveKBadge')
+
+		if (User.getCurrentUser().get('level') !== level) {
+			console.log(User.getCurrentUser().get('level'))
+			console.log(level)
+			toastr.success('YOU GAINED A LEVEL!')
+		}
 
 		if (expPoints >= 250) {
 			twoHundredFiftyMileBadge = true
