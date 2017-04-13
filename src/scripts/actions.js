@@ -31,7 +31,6 @@ var ACTIONS = {
 		newRun.save()
 			.then(
 				function(response) {
-					console.log('run added')
 					toastr.info('Great run!')
 					ACTIONS.fetchAllRuns(runData.user_id)
 				},
@@ -265,7 +264,6 @@ updateUserInfo: function(miles) {
 			fiveKBadge : fiveKBadge
 		})
 		.then(function(user) {
-			console.log(user)
 			STORE.set({
 				usersCollection:user
 			})

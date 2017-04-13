@@ -6,7 +6,7 @@ import UserInfo from '../components/userInfo'
 var BossBattlesPage = React.createClass({
 	render: function() {
 		return (
-			<div className='questsPage'>
+			<div className='bossBattlesPage'>
 				<Banner />
 				<UserInfo />
 				<BossBattleBadgeContainer />
@@ -32,7 +32,7 @@ var BossBattleBadgeContainer = React.createClass({
 		var achievedmarathon = (User.getCurrentUser().get('marathonBadge') === false) ? 'runBadge' : 'runBadgeHidden'
 		var achievedmarathono = (User.getCurrentUser().get('marathonBadge') === false) ? 'overlay' : ''
 		return (
-			<div className='questBadgeContainer'>
+			<div className='bossBattleBadgeContainer'>
 				<h1 className='badgeTitle'>Boss Battles</h1>
 				<hr />
 
