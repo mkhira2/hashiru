@@ -13,10 +13,10 @@ var UserInfo = React.createClass({
 		textAlign: 'left',
 		margin: 0,
 		padding: 0,
-		width: User.getCurrentUser().get('expPoints') % 10 + '0%'
+		width: User.getCurrentUser().get('expPoints').toFixed() % 10 + '0%'
 	}
 
-		var expNeeded = User.getCurrentUser().get('expPoints') % 10 + '0%'
+		var expNeeded = User.getCurrentUser().get('expPoints').toFixed() % 10 + '0%'
 	
 		return (
 			<div className='userInfo'>

@@ -55,7 +55,7 @@ var AddRunForm = React.createClass({
 					<input className='addRunInput' type='text' name='miles' placeholder='Enter miles run' />
 					<button className='addRunButton' type='submit'>Submit</button>
 					<h3>Run History</h3>
-					<p>Total Miles Run: {User.getCurrentUser().get('expPoints')}</p>
+					<p>Total Miles Run: {User.getCurrentUser().get('expPoints').toFixed(2)}</p>
 					<RunList runs={this.props.runs} />
 				</form>
 			</div>
