@@ -7,16 +7,17 @@ import STORE from '../store'
 var UserInfo = React.createClass({
 	render: function() {
 
+		var runner = User.getCurrentUser()
+		var expNeeded = runner.get('expPoints').toFixed() % 10 + '0%'
+
 		var updateProgressBar = {
 		height: '11px',
 		background: 'navy',
 		textAlign: 'left',
 		margin: 0,
 		padding: 0,
-		width: User.getCurrentUser().get('expPoints').toFixed() % 10 + '0%'
+		width: runner.get('expPoints').toFixed() % 10 + '0%'
 	}
-
-		var expNeeded = User.getCurrentUser().get('expPoints').toFixed() % 10 + '0%'
 	
 		return (
 			<div className='userInfo'>

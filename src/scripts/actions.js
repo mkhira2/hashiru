@@ -210,8 +210,6 @@ updateUserInfo: function(miles) {
 	var	fiveKBadge = runner.get('fiveKBadge')
 
 		if (User.getCurrentUser().get('level') !== level) {
-			console.log(User.getCurrentUser().get('level'))
-			console.log(level)
 			toastr.success('YOU GAINED A LEVEL!')
 		}
 
