@@ -15,7 +15,7 @@ toastr.options = {
   "onclick": null,
   "showDuration": "300",
   "hideDuration": "1000",
-  "timeOut": "2500",
+  "timeOut": "5000",
   "extendedTimeOut": "1000",
   "showEasing": "swing",
   "hideEasing": "linear",
@@ -209,44 +209,79 @@ updateUserInfo: function(miles) {
 	var	tenKBadge = runner.get('tenKBadge')
 	var	fiveKBadge = runner.get('fiveKBadge')
 
-		if (User.getCurrentUser().get('level') !== level) {
+		if (runner.get('level') !== level) {
 			toastr.success('YOU GAINED A LEVEL!')
 		}
-
 		if (expPoints >= 250) {
+			if (!twoHundredFiftyMileBadge) {
+				toastr.info('You earned the 250 Mile badge!')
+			}
 			twoHundredFiftyMileBadge = true
 		}
 		if (expPoints >= 200) {
+			if (!twoHundredMileBadge) {
+				toastr.info('You earned the 200 Mile badge!')
+			}
 			twoHundredMileBadge =  true
 		}
 		if (expPoints >= 150) {
+			if (!oneHundredFiftyMileBadge) {
+				toastr.info('You earned the 150 Mile badge!')
+			}
 			oneHundredFiftyMileBadge = true
 		}
 		if (expPoints >= 100) {
+			if (!oneHundredMileBadge) {
+				toastr.info('You earned the 100 Mile badge!')
+			}
 			oneHundredMileBadge = true
 		}
 		if (expPoints >= 50) {
+			if (!fiftyMileBadge) {
+				toastr.info('You earned the 50 Mile badge!')
+			}
 			fiftyMileBadge = true
 		}
 		if (expPoints >= 25) {
+			if (!twentyFiveMileBadge) {
+				toastr.info('You earned the 25 Mile badge!')
+			}
 			twentyFiveMileBadge = true
 		}
 		if (miles >= 26.2) {
+			if (!marathonBadge) {
+				toastr.info('WOW! You earned the Marathon badge!')
+			}
 			marathonBadge = true
 		}
 		if (miles >= 18) {
+			if (!eighteenMileBadge) {
+				toastr.info('You earned the 18 Mile badge!')
+			}
 			 eighteenMileBadge = true
 		}
 		if (miles >= 13.1) {
+			if (!halfMarathonBadge) {
+				toastr.info('You earned the Half Marathon badge!')
+			}
 			halfMarathonBadge = true
 		}
 		if (miles >= 10) {
+			if (!tenMileBadge) {
+				toastr.info('You earned the 10 Mile badge!')
+			}
 			tenMileBadge = true
 		}
 		if (miles >= 6.2) {
+			if (!tenKBadge) {
+				toastr.info('You earned the 10K badge!')
+			}
 			tenKBadge = true
 		}
 		if (miles >= 3.1) {
+			if (!fiveKBadge) {
+				toastr.info('You earned the 5k badge!')
+			}
 			fiveKBadge = true
 		}
 
