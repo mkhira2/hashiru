@@ -198,54 +198,53 @@ updateUserInfo: function(miles) {
 
 	var expPoints = runner.get('expPoints') + Number(miles)
 	var level = Math.floor((runner.get('expPoints') + Number(miles)) / 10)
-	console.log(expPoints,level)
-	var twoHundredFiftyMileBadge = false
-	var twoHundredMileBadge = false
-	var	oneHundredFiftyMileBadge = false
-	var	oneHundredMileBadge = false
-	var	fiftyMileBadge = false
-	var	twentyFiveMileBadge = false
-	var	marathonBadge = false
-	var	eighteenMileBadge = false
-	var	halfMarathonBadge =false
-	var	tenMileBadge =false
-	var	tenKBadge = false
-	var	fiveKBadge =false
+	var twoHundredFiftyMileBadge = runner.get('twoHundredFiftyMileBadge')
+	var twoHundredMileBadge = runner.get('twoHundredMileBadge')
+	var	oneHundredFiftyMileBadge = runner.get('oneHundredFiftyMileBadge')
+	var	oneHundredMileBadge = runner.get('oneHundredMileBadge')
+	var	fiftyMileBadge = runner.get('fiftyMileBadge')
+	var	twentyFiveMileBadge = runner.get('twentyFiveMileBadge')
+	var	marathonBadge = runner.get('marathonBadge')
+	var	eighteenMileBadge = runner.get('eighteenMileBadge')
+	var	halfMarathonBadge = runner.get('halfMarathonBadge')
+	var	tenMileBadge = runner.get('tenMileBadge')
+	var	tenKBadge = runner.get('tenKBadge')
+	var	fiveKBadge = runner.get('fiveKBadge')
 
-		if (expPoints > 249) {
+		if (expPoints >= 250) {
 			twoHundredFiftyMileBadge = true
 		}
-		if (expPoints> 199) {
+		if (expPoints >= 200) {
 			twoHundredMileBadge =  true
 		}
-		if (expPoints > 149) {
+		if (expPoints >= 150) {
 			oneHundredFiftyMileBadge = true
 		}
-		if (expPoints> 99) {
-			oneHundredMileBadge =true
+		if (expPoints >= 100) {
+			oneHundredMileBadge = true
 		}
-		if (expPoints > 49) {
-			fiftyMileBadge =true
+		if (expPoints >= 50) {
+			fiftyMileBadge = true
 		}
-		if (expPoints > 24) {
-			twentyFiveMileBadge =true
+		if (expPoints >= 25) {
+			twentyFiveMileBadge = true
 		}
-		if (miles > 26) {
+		if (miles >= 26.2) {
 			marathonBadge = true
 		}
-		if (miles > 17) {
+		if (miles >= 18) {
 			 eighteenMileBadge = true
 		}
-		if (miles > 13) {
+		if (miles >= 13.1) {
 			halfMarathonBadge = true
 		}
-		if (miles > 9) {
+		if (miles >= 10) {
 			tenMileBadge = true
 		}
-		if (miles > 6) {
+		if (miles >= 6.2) {
 			tenKBadge = true
 		}
-		if (miles > 3) {
+		if (miles >= 3.1) {
 			fiveKBadge = true
 		}
 

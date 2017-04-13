@@ -65,7 +65,6 @@ const User = UserAuthModel.extend({
 	},
 
 	updateCurrentUser: function() {
-		console.log('setting local storage')
 		localStorage.setItem('hashiru_user', JSON.stringify(this.attributes))
 	}
 })
