@@ -79,6 +79,7 @@ var RunList = React.createClass({
 })
 
 var SingleRun = React.createClass({
+
 	handleDelete: function() {
 		ACTIONS.deleteRun(this.props.run)
 	},
@@ -91,7 +92,7 @@ var SingleRun = React.createClass({
 					<p>{this.props.run.get('run') + ' miles'}</p>
 					<div onClick={this.handleDelete} className='deleteRun'>X</div>
 					<div className='runDate'>{moment(date).fromNow()}</div>
-				</div>	
+				</div>
 			</div>
 		)
 	}
