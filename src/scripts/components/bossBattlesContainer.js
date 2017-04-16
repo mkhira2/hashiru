@@ -3,6 +3,15 @@ import React from 'react'
 var BossBattlesContainer = React.createClass({
 	render: function() {
 
+		/*
+			if (current user has unlocked the relevant badge) {
+				display the badge
+			}
+			else {
+				tell you to get out there!
+			}
+		*/
+
 		if (User.getCurrentUser().get('marathonBadge') === true) {
 			return (
 				<div className='bossBattlesContainer'>

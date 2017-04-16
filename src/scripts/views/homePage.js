@@ -38,6 +38,12 @@ var HomePage = React.createClass({
 
 		return (
 
+			// displays 4 items:
+				// 1) Users current level
+				// 2) Users progress bar to next level
+				// 3) Earned boss badges
+				// 4) Earned quest badges
+
 			<div className='homePage'>
 				<Banner />
 				<h1 className='userInfo'>{ACTIONS.checkLogInName()+ "'s status"}</h1>

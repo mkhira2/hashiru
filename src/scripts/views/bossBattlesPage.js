@@ -18,7 +18,7 @@ var BossBattlesPage = React.createClass({
 var BossBattleBadgeContainer = React.createClass({
 
 	render: function() {
-
+		// change CSS class based on whether user has unlocked badge or not
 		var achievedfivek = (User.getCurrentUser().get('fiveKBadge') === false) ? 'runBadge' : 'runBadgeHidden'
 		var achievedfiveko = (User.getCurrentUser().get('fiveKBadge') === false) ? 'overlay' : ''
 		var achievedtenk = (User.getCurrentUser().get('tenKBadge') === false) ? 'runBadge' : 'runBadgeHidden'
@@ -31,7 +31,10 @@ var BossBattleBadgeContainer = React.createClass({
 		var achievedeighteenmileo = (User.getCurrentUser().get('eighteenMileBadge') === false) ? 'overlay' : ''
 		var achievedmarathon = (User.getCurrentUser().get('marathonBadge') === false) ? 'runBadge' : 'runBadgeHidden'
 		var achievedmarathono = (User.getCurrentUser().get('marathonBadge') === false) ? 'overlay' : ''
+
 		return (
+			// badge is "always" displayed - whether or not it's actually visible
+				// depends on current CSS class (aka whether it's been unlocked yet)
 			<div className='bossBattleBadgeContainer'>
 				<h1 className='badgeTitle'>Boss Battles</h1>
 				<hr />

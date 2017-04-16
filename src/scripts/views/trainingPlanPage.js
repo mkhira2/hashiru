@@ -4,6 +4,9 @@ import Banner from '../components/banner'
 import UserInfo from '../components/userInfo'
 
 var TrainingPlanPage = React.createClass({
+
+	// this is a lot of lines of code for a simple marathon html-ish training plan table!
+
 	render: function() {
 		return (
 			<div className='trainingPlanPage'>

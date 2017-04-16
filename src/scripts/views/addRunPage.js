@@ -35,6 +35,8 @@ var AddRunPage = React.createClass({
 
 var AddRunForm = React.createClass({
 
+	// preventDefault() captures user data instead of pushing to url
+	// send data to ACTIONS page to use how we'd like
 	_handleSubmit: function(evtObj){
 		evtObj.preventDefault()
 		var formEl = evtObj.target
@@ -48,6 +50,7 @@ var AddRunForm = React.createClass({
 	},
 
 	render: function() {
+		// generating Add Run form
 		return (
 			<div>
 				<form className='form addRunForm' onSubmit={this._handleSubmit}>
@@ -64,6 +67,7 @@ var AddRunForm = React.createClass({
 })
 
 var RunList = React.createClass({
+		// grabs run from Add Run form
 	makeSingleRun: function(model) {
 			return (
 				<SingleRun run={model} key={model.cid} />
@@ -79,12 +83,12 @@ var RunList = React.createClass({
 })
 
 var SingleRun = React.createClass({
-
 	handleDelete: function() {
 		ACTIONS.deleteRun(this.props.run)
 	},
 
 	render: function() {
+		// displays logged run with current time and option to delete
 		var date = this.props.run.get('createdAt')
 		return (
 			<div className="singleRun" >

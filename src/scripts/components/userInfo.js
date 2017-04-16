@@ -8,6 +8,8 @@ var UserInfo = React.createClass({
 	render: function() {
 
 		var runner = User.getCurrentUser()
+		// toFixed() limits cuts trailing numbers after decimal point
+			// to keep progress bar percentage an even number
 		var expNeeded = runner.get('expPoints').toFixed() % 10 + '0%'
 
 		var updateProgressBar = {

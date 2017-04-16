@@ -69,6 +69,7 @@ body {
     height:100vh;
     background-size: cover;
     text-align: center;
+    margin: auto;
 }
 
 p {
@@ -419,7 +420,8 @@ TRAINING PLAN PAGE
 .trainingPlanTable {
 	width: 80%;
 	margin: 50px auto;
-	background: rgba(242,242,205,.9);
+	// background: rgba(242,242,205,.9);
+	background: aliceblue;
 	box-shadow: 2px 2px grey;
 	border: 2px solid teal;
 	padding: 10px;
@@ -446,5 +448,18 @@ td {
 }
 
 tr:nth-child(even) {
-    background: #eee;
+    background: white;
+}
+
+/*--------------------------------------------------
+BADGE MODALS
+--------------------------------------------------*/
+
+.modal-body {
+	background: darkgrey;
+	color: white;
+}
+
+.modal-footer {
+	background: lightgrey;
 }

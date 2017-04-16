@@ -3,6 +3,15 @@ import React from 'react'
 var QuestsContainer = React.createClass({
 	render: function() {
 
+		/*
+			if (current user has unlocked the relevant badge) {
+				display the badge
+			}
+			else {
+				tell you to get out there!
+			}
+		*/
+
 		if (User.getCurrentUser().get('twoHundredFiftyMileBadge') === true) {
 			return (
 				<div className='questsContainer'>

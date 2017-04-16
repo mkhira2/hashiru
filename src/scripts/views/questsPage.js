@@ -16,8 +16,9 @@ var QuestsPage = React.createClass({
 })
 
 var QuestBadgeContainer = React.createClass({
+	
 	render: function() {
-
+		// change CSS class based on whether user has unlocked badge or not
 		var achievedtwentyfive = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
 		var achievedtwentyfiveo = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'overlay' : ''
 		var achievedfifty = (User.getCurrentUser().get('fiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
@@ -31,8 +32,9 @@ var QuestBadgeContainer = React.createClass({
 		var achievedtwohundredfifty = (User.getCurrentUser().get('twoHundredFiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
 		var achievedtwohundredfiftyo = (User.getCurrentUser().get('twoHundredFiftyMileBadge') === false) ? 'overlay' : ''
 
-
 		return (
+			// badge is "always" displayed - whether or not it's actually visible
+				// depends on current CSS class (aka whether it's been unlocked yet)
 			<div className='questBadgeContainer'>
 				<h1 className='badgeTitle'>Quests</h1>
 				<hr />

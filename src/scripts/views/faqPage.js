@@ -5,6 +5,8 @@ import UserInfo from '../components/userInfo'
 
 var FAQPage = React.createClass({
 	render: function() {
+
+		// FAQ page displayed when user is logged in (with userInfo)
 		return (
 			<div className='faqPage'>
 				<Banner />
