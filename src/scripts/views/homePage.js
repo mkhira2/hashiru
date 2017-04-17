@@ -27,6 +27,8 @@ var HomePage = React.createClass({
 
 	render: function() {
 
+		// update progress bar style based on expPoint %
+
 		var updateProgressBar = {
 		height: '11px',
 		background: 'navy',
@@ -39,10 +41,10 @@ var HomePage = React.createClass({
 		return (
 
 			// displays 4 items:
-				// 1) Users current level
-				// 2) Users progress bar to next level
-				// 3) Earned boss badges
-				// 4) Earned quest badges
+				// 1) Users current level (levelAndNumberHP)
+				// 2) Users progress bar to next level (milesAndBarHP)
+				// 3) Earned boss badges(BBContainer)
+				// 4) Earned quest badges (QContainer)
 
 			<div className='homePage'>
 				<Banner />

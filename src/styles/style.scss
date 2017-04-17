@@ -472,3 +472,15 @@ BADGE MODALS
 .modal-footer {
 	background: lightgrey;
 }
+
+button.btn.btn-primary {
+	background-color: $darkblue;
+	border-color: $midblue;
+	color: white;
+	width: 100%;
+}
+
+button.btn.btn-primary:hover {
+	background-color: $midblue;
+	border-color: $darkblue;
+}
