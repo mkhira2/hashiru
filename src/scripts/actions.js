@@ -153,7 +153,7 @@ var ACTIONS = {
 		}
 	},
 
-	// from addRunPage -- update badge status in database and
+	// from addRunPage -- update badge status in database, and
 		// rerender page to show updated badge status
 		// (this affects CSS class found in boss/quests container components!)
 	updateUserInfo: function(miles) {
