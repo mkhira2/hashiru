@@ -317,7 +317,7 @@ QUEST/BOSS BATTLE PAGES
 }
 
 .overlay {
-	background: black;
+	background: beige;
 	opacity: .2;
 	padding-bottom: 5px;
 	border-radius: 10%;
@@ -409,13 +409,21 @@ form.form.addRunForm p {
 	text-align: center;
 	margin: 10px;
 	padding: 0 10px 10px 10px;
-	background: white;
+	background: aliceblue;
+	box-shadow: 3px 3px slategray;
+}
+
+.runDiv p {
+	font-family: 'Press Start 2P';
+	font-size: 1rem;
+	padding: 0;
 }
 
 .deleteRun {
 	cursor: pointer;
 	text-align: center;
 	color: red;
+	font-size: 2.5rem;
 }
 
 .questsContainer, .bossBattlesContainer {

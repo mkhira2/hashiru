@@ -94,7 +94,7 @@ var SingleRun = React.createClass({
 			<div className="singleRun" >
 				<div className='runDiv'>
 					<p>{this.props.run.get('run') + ' miles'}</p>
-					<div onClick={this.handleDelete} className='deleteRun'>X</div>
+					<div onClick={this.handleDelete} className='deleteRun'>&times;</div>
 					<div className='runDate'>{moment(date).fromNow()}</div>
 				</div>
 			</div>

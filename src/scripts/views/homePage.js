@@ -56,7 +56,7 @@ var HomePage = React.createClass({
 							<h2 className='levelHP'>{User.getCurrentUser().get('level')}</h2>
 						</div>
 						<div className='milesAndBarHP'>
-							<h2>To Next Level: {User.getCurrentUser().get('expPoints') % 10 + '0%'}</h2><br />
+							<h2>{User.getCurrentUser().get('expPoints') % 10 + '0%'} Toward Next Level</h2><br />
 							<div className='progressBarContainer'>
 								<div className='progressBar' style={updateProgressBar}></div>
 								<p className='homeTotalMiles'>Total Miles Run: {User.getCurrentUser().get('expPoints')}</p>
