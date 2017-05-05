@@ -8,7 +8,8 @@ As a marathon runner, I know that mental toughness is just as important as physi
 
 ## Installation
 
-```git clone https://github.com/mkhira2/hashiru.git
+```
+git clone https://github.com/mkhira2/hashiru.git
 cd hashiru
 npm install
 mongod
@@ -17,7 +18,6 @@ npm run go
 open localhost:3000 in the browser
 ```
 
-## License 
+## License
 
 This project is licensed under the MIT License.
-
