@@ -28,10 +28,10 @@ toastr.options = {
 
 var ACTIONS = {
 
-	// from addRunPage -- runData containes miles ran and userID
+	// from views/addRunPage.js -- runData containes miles ran and userID
 	// captures userID and saves to backbone model
 	// calls ACTIONS.fetchAllRuns
-	addRun: function(runData) { 
+	addRun: function(runData) {
 		runData.user_id = User.getCurrentUser().get('_id')
 		var newRun = new Run(runData)
 		newRun.save()
@@ -46,7 +46,7 @@ var ACTIONS = {
 			)
 	},
 
-	// from userInfo -- display current user name, if available
+	// from components/userInfo.js -- display current user name, if available
 	checkLogInName: function() {
 		if (User.getCurrentUser() === null || (User.getCurrentUser().get('name') === undefined)) {
 			return 'Welcome!'
@@ -54,7 +54,7 @@ var ACTIONS = {
 		return `${User.getCurrentUser().get('name')}`
 	},
 
-	// from userInfo -- display current user level, if available
+	// from components/userInfo.js -- display current user level, if available
 	checkLevel: function() {
 		if (User.getCurrentUser().get('level') === null || (User.getCurrentUser().get('level') === undefined)) {
 			return ''
@@ -62,7 +62,7 @@ var ACTIONS = {
 		return `Level ${User.getCurrentUser().get('level')}`
 	},
 
-	// from addRunPage -- delete saved run if X clicked
+	// from views/addRunPage.js -- delete saved run if X clicked
 	deleteRun: function(run) {
 		var userID = User.getCurrentUser().get('_id')
 		run.destroy()
@@ -76,7 +76,7 @@ var ACTIONS = {
 	// from ACTIONS.addRun -- adds logged run
 		// to run collection, resets store with
 		// updated run
-	fetchAllRuns: function(inputID) { 
+	fetchAllRuns: function(inputID) {
 		var runColl = STORE.get('runCollection')
 		runColl.fetch({
 			data: {
@@ -90,7 +90,7 @@ var ACTIONS = {
 			})
 	},
 
-	// from loginPage -- log user in if email and password match
+	// from views/loginPage.js -- log user in if email and password match
 	logUserIn: function(email, password) {
 		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 		User.login(email, password)
@@ -113,7 +113,7 @@ var ACTIONS = {
 		}
 	},
 
-	// from loginPage -- log user out
+	// from views/loginPage.js -- log user out
 	logUserOut: function(){
 		User.logout()
 		.done(
@@ -130,7 +130,7 @@ var ACTIONS = {
 		)
 	},
 
-	// from loginPage -- register user, including email validation
+	// from views/loginPage.js -- register user, including email validation
 	registerUser: function(userData) {
 		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userData.email)) {
 		User.register(userData)
@@ -153,7 +153,7 @@ var ACTIONS = {
 		}
 	},
 
-	// from addRunPage -- update badge status in database, and
+	// from views/addRunPage.js -- update badge status in database, and
 		// rerender page to show updated badge status
 		// (this affects CSS class found in boss/quests container components!)
 	updateUserInfo: function(miles) {
@@ -336,7 +336,7 @@ var ACTIONS = {
 
 		User.getCurrentUser().save({
 			// update badge status in model
-			expPoints: expPoints, 
+			expPoints: expPoints,
 			level: level,
 			twoHundredFiftyMileBadge : twoHundredFiftyMileBadge,
 			twoHundredMileBadge : twoHundredMileBadge,
