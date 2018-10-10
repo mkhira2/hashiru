@@ -10,7 +10,7 @@ As a marathon runner, I know that mental toughness is just as important as physi
 
 ```
 git clone https://github.com/mkhira2/hashiru.git
-cd \
+cd hashiru
 npm install
 mongod
 npm run go
