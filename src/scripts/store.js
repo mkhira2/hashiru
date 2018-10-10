@@ -4,7 +4,7 @@ import {RunCollection} from './models/runModel'
 import {RunnerCollection} from './models/runModel'
 import User from './models/userModel'
 
-var STORE = Object.assign({},Backbone.Events,{
+const STORE = Object.assign({},Backbone.Events,{
 
 	data:{
 		usersCollection: new User(),

@@ -26,7 +26,7 @@ toastr.options = {
   "hideMethod": "fadeOut"
 }
 
-var ACTIONS = {
+const ACTIONS = {
 
 	// from views/addRunPage.js -- runData containes miles ran and userID
 	// captures userID and saves to backbone model
@@ -64,7 +64,7 @@ var ACTIONS = {
 
 	// from views/addRunPage.js -- delete saved run if X clicked
 	deleteRun: function(run) {
-		var userID = User.getCurrentUser().get('_id')
+		let userID = User.getCurrentUser().get('_id')
 		run.destroy()
 			.done(ACTIONS.fetchAllRuns(userID))
 			.fail(function(error) {
@@ -77,7 +77,7 @@ var ACTIONS = {
 		// to run collection, resets store with
 		// updated run
 	fetchAllRuns: function(inputID) {
-		var runColl = STORE.get('runCollection')
+		let runColl = STORE.get('runCollection')
 		runColl.fetch({
 			data: {
 				user_id: inputID
@@ -158,21 +158,21 @@ var ACTIONS = {
 		// (this affects CSS class found in boss/quests container components!)
 	updateUserInfo: function(miles) {
 
-		var runner = User.getCurrentUser()
-		var expPoints = runner.get('expPoints') + Number(miles)
-		var level = Math.floor((runner.get('expPoints') + Number(miles)) / 10)
-		var twoHundredFiftyMileBadge = runner.get('twoHundredFiftyMileBadge')
-		var twoHundredMileBadge = runner.get('twoHundredMileBadge')
-		var	oneHundredFiftyMileBadge = runner.get('oneHundredFiftyMileBadge')
-		var	oneHundredMileBadge = runner.get('oneHundredMileBadge')
-		var	fiftyMileBadge = runner.get('fiftyMileBadge')
-		var	twentyFiveMileBadge = runner.get('twentyFiveMileBadge')
-		var	marathonBadge = runner.get('marathonBadge')
-		var	eighteenMileBadge = runner.get('eighteenMileBadge')
-		var	halfMarathonBadge = runner.get('halfMarathonBadge')
-		var	tenMileBadge = runner.get('tenMileBadge')
-		var	tenKBadge = runner.get('tenKBadge')
-		var	fiveKBadge = runner.get('fiveKBadge')
+		let runner = User.getCurrentUser()
+		let expPoints = runner.get('expPoints') + Number(miles)
+		let level = Math.floor((runner.get('expPoints') + Number(miles)) / 10)
+		let twoHundredFiftyMileBadge = runner.get('twoHundredFiftyMileBadge')
+		let twoHundredMileBadge = runner.get('twoHundredMileBadge')
+		let	oneHundredFiftyMileBadge = runner.get('oneHundredFiftyMileBadge')
+		let	oneHundredMileBadge = runner.get('oneHundredMileBadge')
+		let	fiftyMileBadge = runner.get('fiftyMileBadge')
+		let	twentyFiveMileBadge = runner.get('twentyFiveMileBadge')
+		let	marathonBadge = runner.get('marathonBadge')
+		let	eighteenMileBadge = runner.get('eighteenMileBadge')
+		let	halfMarathonBadge = runner.get('halfMarathonBadge')
+		let	tenMileBadge = runner.get('tenMileBadge')
+		let	tenKBadge = runner.get('tenKBadge')
+		let	fiveKBadge = runner.get('fiveKBadge')
 
 			if (runner.get('level') !== level) {
 				toastr.success('YOU GAINED A LEVEL!')

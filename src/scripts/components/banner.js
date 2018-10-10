@@ -3,7 +3,7 @@ import User from '../models/userModel'
 
 import ACTIONS from '../actions'
 
-var Banner = React.createClass({
+const Banner = React.createClass({
 	// ensures that runs logged correlate with logged in user
 	runLink:function(){
 		return (User.getCurrentUser()) ?  <a href= {`#addrun/user/${User.getCurrentUser().get('_id')}`} className= 'navATag'>Add/View Runs</a> : null

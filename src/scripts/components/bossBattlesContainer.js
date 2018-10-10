@@ -1,6 +1,6 @@
 import React from 'react'
 
-var BossBattlesContainer = React.createClass({
+const BossBattlesContainer = React.createClass({
 	render: function() {
 
 		/*

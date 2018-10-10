@@ -1,7 +1,7 @@
 const init = function() {
 	const findCookie = function(targetKey) {
-		var cookies = document.cookie.split(';')
-		var targetVal
+		const cookies = document.cookie.split(';')
+		let targetVal =
 		cookies.forEach(function(cookie){
 			let key = cookie.split('=')[0].trim(),
 				val = decodeURIComponent(cookie.split('=')[1])
@@ -11,8 +11,8 @@ const init = function() {
 		})
 		return targetVal
 	}
-	var app_name = 'hashiru'
-	var user = findCookie(app_name + '_user')
+	const app_name = 'hashiru'
+	const user = findCookie(app_name + '_user')
 	if (user) {
 		localStorage.setItem(app_name + '_user',user)
 	}

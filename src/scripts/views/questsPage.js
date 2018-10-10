@@ -3,7 +3,7 @@ import React from 'react'
 import Banner from '../components/banner'
 import UserInfo from '../components/userInfo'
 
-var QuestsPage = React.createClass({
+const QuestsPage = React.createClass({
 	render: function() {
 		return (
 			<div className='questsPage'>
@@ -15,22 +15,22 @@ var QuestsPage = React.createClass({
 	}
 })
 
-var QuestBadgeContainer = React.createClass({
+const QuestBadgeContainer = React.createClass({
 	
 	render: function() {
 		// change CSS class based on whether user has unlocked badge or not
-		var achievedtwentyfive = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedtwentyfiveo = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'overlay' : ''
-		var achievedfifty = (User.getCurrentUser().get('fiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedfiftyo = (User.getCurrentUser().get('fiftyMileBadge') === false) ? 'overlay' : ''
-		var achievedonehundred = (User.getCurrentUser().get('oneHundredMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedonehundredo = (User.getCurrentUser().get('oneHundredMileBadge') === false) ? 'overlay' : ''
-		var achievedonehundredfifty = (User.getCurrentUser().get('oneHundredFiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedonehundredfiftyo = (User.getCurrentUser().get('oneHundredFiftyMileBadge') === false) ? 'overlay' : ''
-		var achievedtwohundred = (User.getCurrentUser().get('twoHundredMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedtwohundredo = (User.getCurrentUser().get('twoHundredMileBadge') === false) ? 'overlay' : ''
-		var achievedtwohundredfifty = (User.getCurrentUser().get('twoHundredFiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedtwohundredfiftyo = (User.getCurrentUser().get('twoHundredFiftyMileBadge') === false) ? 'overlay' : ''
+		const achievedtwentyfive = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedtwentyfiveo = (User.getCurrentUser().get('twentyFiveMileBadge') === false) ? 'overlay' : ''
+		const achievedfifty = (User.getCurrentUser().get('fiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedfiftyo = (User.getCurrentUser().get('fiftyMileBadge') === false) ? 'overlay' : ''
+		const achievedonehundred = (User.getCurrentUser().get('oneHundredMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedonehundredo = (User.getCurrentUser().get('oneHundredMileBadge') === false) ? 'overlay' : ''
+		const achievedonehundredfifty = (User.getCurrentUser().get('oneHundredFiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedonehundredfiftyo = (User.getCurrentUser().get('oneHundredFiftyMileBadge') === false) ? 'overlay' : ''
+		const achievedtwohundred = (User.getCurrentUser().get('twoHundredMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedtwohundredo = (User.getCurrentUser().get('twoHundredMileBadge') === false) ? 'overlay' : ''
+		const achievedtwohundredfifty = (User.getCurrentUser().get('twoHundredFiftyMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedtwohundredfiftyo = (User.getCurrentUser().get('twoHundredFiftyMileBadge') === false) ? 'overlay' : ''
 
 		return (
 			// badge is "always" displayed - whether or not it's actually visible

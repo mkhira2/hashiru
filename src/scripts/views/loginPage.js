@@ -6,7 +6,7 @@ import ACTIONS from '../actions'
 // BASIC LOGIN & REGISTER FORM 
 	// with short intro box
 
-var LoginPage = React.createClass({
+const LoginPage = React.createClass({
 	render: function() {
 		return (
 			<div className='loginPage'>
@@ -21,7 +21,7 @@ var LoginPage = React.createClass({
 	}
 })
 
-var LoginForm = React.createClass({
+const LoginForm = React.createClass({
 	_handleSubmit: function(evtObj){
 		evtObj.preventDefault()
 		var formEl = evtObj.target

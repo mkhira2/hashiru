@@ -16,7 +16,7 @@ import FAQPageLoggedOut from './views/faqPageLoggedOut'
 
 
 const app = function() {
-    var HashiruRouter = Backbone.Router.extend({
+    let HashiruRouter = Backbone.Router.extend({
 
         routes: {
             'home': 'renderHomePage',

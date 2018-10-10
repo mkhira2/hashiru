@@ -7,7 +7,7 @@ import STORE from '../store'
 import User from '../models/userModel'
 import ACTIONS from '../actions'
 
-var HomePage = React.createClass({
+const HomePage = React.createClass({
 
 	componentWillMount(){
 		STORE.on('dataUpdated', ()=> {
@@ -29,7 +29,7 @@ var HomePage = React.createClass({
 
 		// update progress bar style based on expPoint %
 
-		var updateProgressBar = {
+		const updateProgressBar = {
 		height: '11px',
 		background: 'navy',
 		textAlign: 'left',

@@ -3,7 +3,7 @@ import React from 'react'
 import Banner from '../components/banner'
 import UserInfo from '../components/userInfo'
 
-var BossBattlesPage = React.createClass({
+const BossBattlesPage = React.createClass({
 	render: function() {
 		return (
 			<div className='bossBattlesPage'>
@@ -15,22 +15,22 @@ var BossBattlesPage = React.createClass({
 	}
 })
 
-var BossBattleBadgeContainer = React.createClass({
+const BossBattleBadgeContainer = React.createClass({
 
 	render: function() {
 		// change CSS class based on whether user has unlocked badge or not
-		var achievedfivek = (User.getCurrentUser().get('fiveKBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedfiveko = (User.getCurrentUser().get('fiveKBadge') === false) ? 'overlay' : ''
-		var achievedtenk = (User.getCurrentUser().get('tenKBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedtenko = (User.getCurrentUser().get('tenKBadge') === false) ? 'overlay' : ''
-		var achievedtenmile = (User.getCurrentUser().get('tenMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedtenmileo = (User.getCurrentUser().get('tenMileBadge') === false) ? 'overlay' : ''
-		var achievedhalfmarathon = (User.getCurrentUser().get('halfMarathonBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedhalfmarathono = (User.getCurrentUser().get('halfMarathonBadge') === false) ? 'overlay' : ''
-		var achievedeighteenmile = (User.getCurrentUser().get('eighteenMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedeighteenmileo = (User.getCurrentUser().get('eighteenMileBadge') === false) ? 'overlay' : ''
-		var achievedmarathon = (User.getCurrentUser().get('marathonBadge') === false) ? 'runBadge' : 'runBadgeHidden'
-		var achievedmarathono = (User.getCurrentUser().get('marathonBadge') === false) ? 'overlay' : ''
+		const achievedfivek = (User.getCurrentUser().get('fiveKBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedfiveko = (User.getCurrentUser().get('fiveKBadge') === false) ? 'overlay' : ''
+		const achievedtenk = (User.getCurrentUser().get('tenKBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedtenko = (User.getCurrentUser().get('tenKBadge') === false) ? 'overlay' : ''
+		const achievedtenmile = (User.getCurrentUser().get('tenMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedtenmileo = (User.getCurrentUser().get('tenMileBadge') === false) ? 'overlay' : ''
+		const achievedhalfmarathon = (User.getCurrentUser().get('halfMarathonBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedhalfmarathono = (User.getCurrentUser().get('halfMarathonBadge') === false) ? 'overlay' : ''
+		const achievedeighteenmile = (User.getCurrentUser().get('eighteenMileBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedeighteenmileo = (User.getCurrentUser().get('eighteenMileBadge') === false) ? 'overlay' : ''
+		const achievedmarathon = (User.getCurrentUser().get('marathonBadge') === false) ? 'runBadge' : 'runBadgeHidden'
+		const achievedmarathono = (User.getCurrentUser().get('marathonBadge') === false) ? 'overlay' : ''
 
 		return (
 			// badge is "always" displayed - whether or not it's actually visible

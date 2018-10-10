@@ -3,7 +3,7 @@ import React from 'react'
 import Banner from '../components/banner'
 import UserInfo from '../components/userInfo'
 
-var TrainingPlanPage = React.createClass({
+const TrainingPlanPage = React.createClass({
 
 	// this is a lot of lines of code for a simple marathon html-ish training plan table!
 

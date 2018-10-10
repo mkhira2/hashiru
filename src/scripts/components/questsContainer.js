@@ -1,6 +1,6 @@
 import React from 'react'
 
-var QuestsContainer = React.createClass({
+const QuestsContainer = React.createClass({
 	render: function() {
 
 		/*
