@@ -1,10 +1,6 @@
-import Backbone from 'backbone'
-import React from 'react'
-import ReactDOM from 'react-dom'
 import User from './models/userModel'
 import {Run} from './models/runModel'
 import STORE from './store'
-import $ from 'jquery'
 
 
 // set parameters for 'leveled up' and 'error' toastr alerts

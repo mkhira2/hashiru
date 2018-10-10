@@ -1,5 +1,4 @@
 import React from 'react'
-import Backbone from 'backbone'
 import Banner from '../components/banner'
 import QuestsContainer from '../components/questsContainer'
 import BossBattlesContainer from '../components/bossBattlesContainer'
