@@ -2,9 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
-import ACTIONS from './actions'
 import User from './models/userModel'
-
 import HomePage from './views/homePage'
 import LoginPage from './views/loginPage'
 import AddRunPage from './views/addRunPage'
@@ -16,7 +14,7 @@ import FAQPageLoggedOut from './views/faqPageLoggedOut'
 
 
 const app = function() {
-    var HashiruRouter = Backbone.Router.extend({
+    let HashiruRouter = Backbone.Router.extend({
 
         routes: {
             'home': 'renderHomePage',

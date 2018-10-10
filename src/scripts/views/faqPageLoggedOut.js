@@ -2,7 +2,7 @@ import React from 'react'
 
 import Banner from '../components/banner'
 
-var FAQPageLoggedOut = React.createClass({
+const FAQPageLoggedOut = React.createClass({
 	render: function() {
 
 		// FAQ page displayed when user is logged out (without userInfo)

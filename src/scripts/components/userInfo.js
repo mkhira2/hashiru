@@ -4,15 +4,15 @@ import User from '../models/userModel'
 import ACTIONS from '../actions'
 import STORE from '../store'
 
-var UserInfo = React.createClass({
+const UserInfo = React.createClass({
 	render: function() {
 
-		var runner = User.getCurrentUser()
+		let runner = User.getCurrentUser()
 		// toFixed() limits cuts trailing numbers after decimal point
 			// to keep progress bar percentage an even number
-		var expNeeded = runner.get('expPoints').toFixed() % 10 + '0%'
+		let expNeeded = runner.get('expPoints').toFixed() % 10 + '0%'
 
-		var updateProgressBar = {
+		let updateProgressBar = {
 		height: '11px',
 		background: 'navy',
 		textAlign: 'left',

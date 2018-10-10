@@ -5,7 +5,7 @@ import User from '../models/userModel.js'
 import Banner from '../components/banner'
 import UserInfo from '../components/userInfo'
 
-var AddRunPage = React.createClass({
+const AddRunPage = React.createClass({
 
 	componentWillMount(){
 		ACTIONS.fetchAllRuns(this.props.userID)
@@ -33,7 +33,7 @@ var AddRunPage = React.createClass({
 	}
 })
 
-var AddRunForm = React.createClass({
+const AddRunForm = React.createClass({
 
 	// preventDefault() captures user data instead of pushing to url
 	// send data to ACTIONS page to use how we'd like
@@ -66,7 +66,7 @@ var AddRunForm = React.createClass({
 	}
 })
 
-var RunList = React.createClass({
+const RunList = React.createClass({
 		// grabs run from Add Run form
 	makeSingleRun: function(model) {
 			return (
@@ -82,14 +82,14 @@ var RunList = React.createClass({
 	}
 })
 
-var SingleRun = React.createClass({
+const SingleRun = React.createClass({
 	handleDelete: function() {
 		ACTIONS.deleteRun(this.props.run)
 	},
 
 	render: function() {
 		// displays logged run with current time and option to delete
-		var date = this.props.run.get('createdAt')
+		const date = this.props.run.get('createdAt')
 		return (
 			<div className="singleRun" >
 				<div className='runDiv'>
