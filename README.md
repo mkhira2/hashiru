@@ -14,8 +14,8 @@ cd hashiru
 npm install
 mongod
 npm run go
-```
 open localhost:3000 in the browser
+```
 
 ## License
 
